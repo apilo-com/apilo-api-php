@@ -24,7 +24,7 @@ $apiInstance = new AuthorizationApi(
     $config
 );
 
-$payload = new RestAuthTokenPostRequest(); // \OpenAPI\Client\Model\RestAuthTokenPostRequest
+$payload = new RestAuthTokenPostRequest(); // \Apilo\Model\RestAuthTokenPostRequest
 $payload->setGrantType(RestAuthTokenPostRequest::GRANT_TYPE_REFRESH_TOKEN);
 $payload->setToken(getenv('REFRESH_TOKEN'));
 
