@@ -1,8 +1,8 @@
 <?php
 
 use Dotenv\Dotenv;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\Model\RestAuthTokenPostRequest;
+use Apilo\Configuration;
+use Apilo\Model\RestAuthTokenPostRequest;
 
 require_once(__DIR__ . '/../vendor/autoload.php');
 require_once(__DIR__ . '/../../api-documentation/vendor/autoload.php');
@@ -16,14 +16,14 @@ $config = (new Configuration())
     ->setHost(getenv('HOST'))
 ;
 
-$apiInstance = new OpenAPI\Client\Api\AuthorizationApi(
+$apiInstance = new Apilo\Api\AuthorizationApi(
 // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
 // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(['verify' => false]),
     $config
 );
 
-$payload = new RestAuthTokenPostRequest(); // \OpenAPI\Client\Model\RestAuthTokenPostRequest
+$payload = new RestAuthTokenPostRequest(); // \Apilo\Model\RestAuthTokenPostRequest
 $payload->setGrantType(RestAuthTokenPostRequest::GRANT_TYPE_AUTHORIZATION_CODE);
 $payload->setToken(getenv('AUTHORIZATION_CODE'));
 

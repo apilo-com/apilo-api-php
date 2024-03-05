@@ -1,8 +1,8 @@
 <?php
 
 use Dotenv\Dotenv;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\Model\RestOrderItemsDTO;
+use Apilo\Configuration;
+use Apilo\Model\RestOrderItemsDTO;
 
 require_once(__DIR__ . '/../vendor/autoload.php');
 require_once(__DIR__ . '/../../api-documentation/vendor/autoload.php');
@@ -15,7 +15,7 @@ $config = (new Configuration())
     ->setHost(getenv('HOST'))
 ;
 
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
+$apiInstance = new Apilo\Api\OrderApi(
 // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
 // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(['verify' => false]),
