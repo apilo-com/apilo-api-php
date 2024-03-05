@@ -10,8 +10,10 @@
     "autoload-dev": {
         "psr-4": { "Apilo\\Test\\" : "src/test/" }
     },
-    "require": {
-        "php": ">=7.4"
+    "config": {
+        "platform": {
+            "php": "7.4"
+        }
     },
     "minimum-stability": "stable",
     "keywords": [
