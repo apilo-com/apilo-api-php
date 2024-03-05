@@ -31,8 +31,10 @@ The response will return a new `accessToken` and a new `refreshToken`.
 ### Implementation
 All implementation requirements are described in the official documentation available at https://developer.apilo.com/api/.
 You are encouraged to generate code using OpenAPI based on the [swagger.json](https://developer.apilo.com/uploads/apilo/swagger.json) file available
-for download at the very top of the documentation.
+for download at the very top of the documentation. If you are using the PHP language in your project then we encourage you to use the 
+implementation in this repository.
 
-#### todo
-- API generated in PHP language
-- Files with examples of API method usage
+### Examples
+- [Obtain Access and Refresh tokens using authorization_code](./Examples/Authorization/ExampleGetAccessToken.php)
+- [Refresh Access and Refresh tokens using refresh_token](./Examples/Authorization/ExampleRefreshToken.php)
+- [Get list of orders](./Examples/Orders/ExampleApiOrdersGet.php)
