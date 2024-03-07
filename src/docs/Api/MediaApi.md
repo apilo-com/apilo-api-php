@@ -1,6 +1,6 @@
 # OpenAPI\Client\MediaApi
 
-All URIs are relative to https://erpbox.devo/app_dev.php, except if the operation defines another base path.
+All URIs are relative to https://ENDPOINT.apilo.com/ (ENDPOINT is an individual client address), except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
