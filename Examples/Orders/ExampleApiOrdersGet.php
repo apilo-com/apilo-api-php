@@ -5,7 +5,7 @@ use Apilo\Configuration;
 use Apilo\Model\RestOrderItemsDTO;
 
 require_once(__DIR__ . '/../vendor/autoload.php');
-require_once(__DIR__ . '/../../api-documentation/vendor/autoload.php');
+require_once(__DIR__ . '/../../src/vendor/autoload.php');
 
 loadEnv();
 

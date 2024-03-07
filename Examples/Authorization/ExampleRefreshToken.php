@@ -1,11 +1,12 @@
 <?php
 
-use Dotenv\Dotenv;
+use Apilo\Api\AuthorizationApi;
 use Apilo\Configuration;
 use Apilo\Model\RestAuthTokenPostRequest;
+use Dotenv\Dotenv;
 
 require_once(__DIR__ . '/../vendor/autoload.php');
-require_once(__DIR__ . '/../../api-documentation/vendor/autoload.php');
+require_once(__DIR__ . '/../../src/vendor/autoload.php');
 
 loadEnv();
 
@@ -16,7 +17,7 @@ $config = (new Configuration())
     ->setHost(getenv('HOST'))
 ;
 
-$apiInstance = new Apilo\Api\AuthorizationApi(
+$apiInstance = new AuthorizationApi(
 // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
 // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(['verify' => false]),
