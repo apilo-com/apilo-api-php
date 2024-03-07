@@ -1,7 +1,7 @@
 {
     "name": "apilo/apilo-api-php",
     "description": "Apilo PHP Client",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "homepage": "https://apilo.com/",
     "license": "MIT",
     "autoload": {
@@ -26,14 +26,9 @@
         "api"
     ],
     "authors": [
-
         {
-            "name": "Łukasz Wątor",
-            "email": "lukasz.wator@apilo.com"
-        },
-        {
-            "name": "Janusz Samotyja",
-            "email": "janusz.samotyja@apilo.com"
+            "name": "Apilo",
+            "email": "bok@apilo.pl"
         }
     ],
     "require-dev": {

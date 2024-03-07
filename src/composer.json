@@ -14,12 +14,8 @@
     "minimum-stability": "stable",
     "authors": [
         {
-            "name": "Janusz Samotyja",
-            "email": "janusz.samotyja@apilo.com"
-        },
-        {
-            "name": "Łukasz Wątor",
-            "email": "lukasz.wator@apilo.com"
+            "name": "Apilo",
+            "email": "bok@apilo.pl"
         }
     ],
     "require": {
