@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Internal order ID in Apilo | [optional]
-**type** | **string** | Type of the note | [optional] [default to '1']
+**type** | **int** | Type of the note | [optional] [default to self::TYPE_NUMBER_1]
 **created_at** | **\DateTime** | Time when created note | [optional]
 **comment** | **string** | Note content |
 

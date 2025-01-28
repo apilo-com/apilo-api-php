@@ -15,9 +15,9 @@ Name | Type | Description | Notes
 **invoiced_at** | **\DateTime** | Date of issuance of the document |
 **sold_at** | **\DateTime** | Date of sale on the document | [optional]
 **type** | **string** | Document type (1 - Invoice, 2 - Margin invoice, 5 - Receipt, 10 - Proforma invoice) | [optional]
-**document_receiver** | [**\OpenAPI\Client\Model\RestDocumentPersonalInfoDTO**](RestDocumentPersonalInfoDTO.md) |  | [optional]
-**document_issuer** | [**\OpenAPI\Client\Model\RestDocumentPersonalInfoDTO**](RestDocumentPersonalInfoDTO.md) |  | [optional]
-**document_items** | [**\OpenAPI\Client\Model\RestDocumentItemDTO[]**](RestDocumentItemDTO.md) | Docment items | [optional]
-**payment_type** | **int** | &lt;a href&#x3D;&#39;#tag/order/paths/~1rest~1api~1orders~1payment~1map~1/get&#39;&gt;Payment method ID&lt;/a&gt; |
+**document_receiver** | [**\Apilo\Model\RestDocumentPersonalInfoDTO**](RestDocumentPersonalInfoDTO.md) |  | [optional]
+**document_issuer** | [**\Apilo\Model\RestDocumentPersonalInfoDTO**](RestDocumentPersonalInfoDTO.md) |  | [optional]
+**document_items** | [**\Apilo\Model\RestDocumentItemDTO[]**](RestDocumentItemDTO.md) | Docment items | [optional]
+**payment_type** | **int** | &lt;a href&#x3D;&#39;#tag/Order/operation/get_rest_orders_payment_map&#39;&gt;Payment method ID&lt;/a&gt; |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

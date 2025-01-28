@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **message** | **string** |  | [optional]
 **code** | **int** |  | [optional]
 **description** | **string** |  | [optional]
-**errors** | [**\OpenAPI\Client\Model\RestBundleException[]**](RestBundleException.md) |  | [optional]
+**errors** | [**\Apilo\Model\RestBundleException[]**](RestBundleException.md) |  | [optional]
 **field** | **string** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

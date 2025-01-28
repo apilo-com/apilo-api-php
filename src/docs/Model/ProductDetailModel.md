@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **weight** | **string** | Product weight [kg] | [optional]
 **price_without_tax** | **string** | Net price | [optional]
 **sku** | **string** | Product SKU | [optional]
-**ean** | **string** | EAN-13 | [optional]
+**ean** | **string** | EAN-14 | [optional]
 **id** | **int** | Internal product ID in Apilo | [optional]
 **original_code** | **string** | External product identifier (unambiguous against API/channel) | [optional]
 **quantity** | **int** | Product stock | [optional]

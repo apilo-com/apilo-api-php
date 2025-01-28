@@ -1,20 +1,20 @@
-# OpenAPI\Client\ConnectionApi
+# Apilo\ConnectionApi
 
 All URIs are relative to https://ENDPOINT.apilo.com/ (ENDPOINT is an individual client address), except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**restApiGet()**](ConnectionApi.md#restApiGet) | **GET** /rest/api/ | Connection test |
-| [**restApiWhoamiGet()**](ConnectionApi.md#restApiWhoamiGet) | **GET** /rest/api/whoami/ | Connection info |
+| [**getRestIndexIndex()**](ConnectionApi.md#getRestIndexIndex) | **GET** /rest/api/ | Connection test. |
+| [**getRestIndexWhoami()**](ConnectionApi.md#getRestIndexWhoami) | **GET** /rest/api/whoami/ | Connection info. |
 
 
-## `restApiGet()`
+## `getRestIndexIndex()`
 
 ```php
-restApiGet(): \OpenAPI\Client\Model\HelloResponse
+getRestIndexIndex(): \Apilo\Model\HelloResponse
 ```
 
-Connection test
+Connection test.
 
 Test Api
 
@@ -25,11 +25,11 @@ Test Api
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ConnectionApi(
+$apiInstance = new Apilo\Api\ConnectionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -37,10 +37,10 @@ $apiInstance = new OpenAPI\Client\Api\ConnectionApi(
 );
 
 try {
-    $result = $apiInstance->restApiGet();
+    $result = $apiInstance->getRestIndexIndex();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ConnectionApi->restApiGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ConnectionApi->getRestIndexIndex: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -50,11 +50,11 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HelloResponse**](../Model/HelloResponse.md)
+[**\Apilo\Model\HelloResponse**](../Model/HelloResponse.md)
 
 ### Authorization
 
-[OAuth2](../../README.md#OAuth2)
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -65,13 +65,13 @@ This endpoint does not need any parameter.
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `restApiWhoamiGet()`
+## `getRestIndexWhoami()`
 
 ```php
-restApiWhoamiGet(): \OpenAPI\Client\Model\WhoamiResponse
+getRestIndexWhoami(): \Apilo\Model\ContentDTO
 ```
 
-Connection info
+Connection info.
 
 Informacje o połączeniu
 
@@ -82,11 +82,11 @@ Informacje o połączeniu
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ConnectionApi(
+$apiInstance = new Apilo\Api\ConnectionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -94,10 +94,10 @@ $apiInstance = new OpenAPI\Client\Api\ConnectionApi(
 );
 
 try {
-    $result = $apiInstance->restApiWhoamiGet();
+    $result = $apiInstance->getRestIndexWhoami();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ConnectionApi->restApiWhoamiGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ConnectionApi->getRestIndexWhoami: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -107,11 +107,11 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\WhoamiResponse**](../Model/WhoamiResponse.md)
+[**\Apilo\Model\ContentDTO**](../Model/ContentDTO.md)
 
 ### Authorization
 
-[OAuth2](../../README.md#OAuth2)
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 

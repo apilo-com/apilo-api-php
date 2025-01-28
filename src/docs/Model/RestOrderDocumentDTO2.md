@@ -11,7 +11,8 @@ Name | Type | Description | Notes
 **price_without_tax** | **string** | The net value | [optional]
 **currency** | **string** | Currency on the document | [optional]
 **currency_value** | **string** | Currency exchange rate | [optional]
-**type** | **int** | Document type - &lt;a href&#x3D;&#39;#tag/order/paths/~1rest~1api~1orders~1documents~1map~1/get&#39;&gt;order document types endpoint&lt;/a&gt; |
-**created_at** | **string** | Date the document was added to Apilo | [optional]
+**type** | **int** | Document type - &lt;a href&#x3D;&#39;#tag/Order/operation/get_rest_documents_map&#39;&gt;order document types endpoint&lt;/a&gt; |
+**media** | **string** | Null or media UUID - &lt;a href&#x3D;&#39;#tag/Media/operation/post_rest_media_new&#39;&gt;media attachment endpoint&lt;/a&gt; | [optional]
+**created_at** | **\DateTime** | Date the document was added to Apilo | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -2,6 +2,7 @@
 
 use Apilo\Api\AuthorizationApi;
 use Apilo\Configuration;
+use Apilo\Model\AuthorizationRequest;
 use Apilo\Model\RestAuthTokenPostRequest;
 use Dotenv\Dotenv;
 
@@ -24,15 +25,16 @@ $apiInstance = new AuthorizationApi(
     $config
 );
 
-$payload = new RestAuthTokenPostRequest(); // \Apilo\Model\RestAuthTokenPostRequest
+$payload = new AuthorizationRequest(); // \Apilo\Model\RestAuthTokenPostRequest
 $payload->setGrantType(RestAuthTokenPostRequest::GRANT_TYPE_AUTHORIZATION_CODE);
 $payload->setToken(getenv('AUTHORIZATION_CODE'));
 
 try {
-    $result = $apiInstance->restAuthTokenPost($payload);
+    $result = $apiInstance->postRestAuthTokenpost($payload);
 
     print_r($result);
 } catch (Exception $e) {
+    echo $e->getTraceAsString();
     echo 'Exception when calling AuthorizationApi->restAuthTokenPost: ', $e->getMessage(), PHP_EOL;
 }
 

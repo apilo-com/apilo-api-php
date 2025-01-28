@@ -1,20 +1,20 @@
-# OpenAPI\Client\SaleApi
+# Apilo\SaleApi
 
 All URIs are relative to https://ENDPOINT.apilo.com/ (ENDPOINT is an individual client address), except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**restApiSaleAuctionGet()**](SaleApi.md#restApiSaleAuctionGet) | **GET** /rest/api/sale/auction/ | Get auctions list |
-| [**restApiSaleGet()**](SaleApi.md#restApiSaleGet) | **GET** /rest/api/sale/ | Get list of sales channels |
+| [**getRestSaleAuctionIndex()**](SaleApi.md#getRestSaleAuctionIndex) | **GET** /rest/api/sale/auction/ | Get auctions list. |
+| [**getRestSaleIndex()**](SaleApi.md#getRestSaleIndex) | **GET** /rest/api/sale/ | Get list of sales channels. |
 
 
-## `restApiSaleAuctionGet()`
+## `getRestSaleAuctionIndex()`
 
 ```php
-restApiSaleAuctionGet()
+getRestSaleAuctionIndex(): mixed
 ```
 
-Get auctions list
+Get auctions list.
 
 ### Example
 
@@ -23,11 +23,11 @@ Get auctions list
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\SaleApi(
+$apiInstance = new Apilo\Api\SaleApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -35,9 +35,10 @@ $apiInstance = new OpenAPI\Client\Api\SaleApi(
 );
 
 try {
-    $apiInstance->restApiSaleAuctionGet();
+    $result = $apiInstance->getRestSaleAuctionIndex();
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling SaleApi->restApiSaleAuctionGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SaleApi->getRestSaleAuctionIndex: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -47,11 +48,11 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+**mixed**
 
 ### Authorization
 
-[OAuth2](../../README.md#OAuth2)
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -62,13 +63,13 @@ void (empty response body)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `restApiSaleGet()`
+## `getRestSaleIndex()`
 
 ```php
-restApiSaleGet()
+getRestSaleIndex(): mixed
 ```
 
-Get list of sales channels
+Get list of sales channels.
 
 ### Example
 
@@ -77,11 +78,11 @@ Get list of sales channels
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\SaleApi(
+$apiInstance = new Apilo\Api\SaleApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -89,9 +90,10 @@ $apiInstance = new OpenAPI\Client\Api\SaleApi(
 );
 
 try {
-    $apiInstance->restApiSaleGet();
+    $result = $apiInstance->getRestSaleIndex();
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling SaleApi->restApiSaleGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SaleApi->getRestSaleIndex: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -101,11 +103,11 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+**mixed**
 
 ### Authorization
 
-[OAuth2](../../README.md#OAuth2)
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 

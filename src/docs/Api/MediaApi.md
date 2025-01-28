@@ -1,17 +1,73 @@
-# OpenAPI\Client\MediaApi
+# Apilo\MediaApi
 
 All URIs are relative to https://ENDPOINT.apilo.com/ (ENDPOINT is an individual client address), except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**restApiMediaPost()**](MediaApi.md#restApiMediaPost) | **POST** /rest/api/media/ | Create new media attachment |
+| [**getRestMediaGet()**](MediaApi.md#getRestMediaGet) | **GET** /rest/api/media/{uuid}/ | Get media. |
+| [**postRestMediaNew()**](MediaApi.md#postRestMediaNew) | **POST** /rest/api/media/ | Create new media attachment. |
 
 
-## `restApiMediaPost()`
+## `getRestMediaGet()`
 
 ```php
-restApiMediaPost($body, $content_disposition): \OpenAPI\Client\Model\Media
+getRestMediaGet($uuid)
 ```
+
+Get media.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new Apilo\Api\MediaApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$uuid = 'uuid_example'; // string | UUID Media
+
+try {
+    $apiInstance->getRestMediaGet($uuid);
+} catch (Exception $e) {
+    echo 'Exception when calling MediaApi->getRestMediaGet: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **uuid** | **string**| UUID Media | |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `postRestMediaNew()`
+
+```php
+postRestMediaNew($body, $content_disposition): \Apilo\Model\Media
+```
+
+Create new media attachment.
 
 Create new media attachment
 
@@ -22,24 +78,24 @@ Create new media attachment
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MediaApi(
+$apiInstance = new Apilo\Api\MediaApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = "/path/to/file.txt"; // \SplFileObject | You can create new media attachment for files with type application/pdf, image/jpeg, image/png, image/gif, image/webp
-$content_disposition = 'content_disposition_example'; // string | Extra file parameters (e.g. <code>Content-Disposition: filename=invoice.pdf</code>)
+$body = '/path/to/file.txt'; // \SplFileObject | You can create new media attachment for files with type application/pdf, image/jpeg, image/png, image/gif, image/webp
+$content_disposition = 'content_disposition_example'; // string | Extra file parameters (e.g. 'Content-Disposition: filename=invoice.pdf')
 
 try {
-    $result = $apiInstance->restApiMediaPost($body, $content_disposition);
+    $result = $apiInstance->postRestMediaNew($body, $content_disposition);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling MediaApi->restApiMediaPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling MediaApi->postRestMediaNew: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -48,19 +104,19 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | **\SplFileObject****\SplFileObject**| You can create new media attachment for files with type application/pdf, image/jpeg, image/png, image/gif, image/webp | |
-| **content_disposition** | **string**| Extra file parameters (e.g. &lt;code&gt;Content-Disposition: filename&#x3D;invoice.pdf&lt;/code&gt;) | [optional] |
+| **content_disposition** | **string**| Extra file parameters (e.g. &#39;Content-Disposition: filename&#x3D;invoice.pdf&#39;) | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Media**](../Model/Media.md)
+[**\Apilo\Model\Media**](../Model/Media.md)
 
 ### Authorization
 
-[OAuth2](../../README.md#OAuth2)
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
-- **Content-Type**: `application/pdf`, `image/jpeg`, `image/png`, `image/webp`, `image/gif`
+- **Content-Type**: `application/octet-stream`
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

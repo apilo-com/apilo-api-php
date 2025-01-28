@@ -1,44 +1,44 @@
-# OpenAPI\Client\OrderApi
+# Apilo\OrderApi
 
 All URIs are relative to https://ENDPOINT.apilo.com/ (ENDPOINT is an individual client address), except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**restApiOrdersCarrierAccountMapGet()**](OrderApi.md#restApiOrdersCarrierAccountMapGet) | **GET** /rest/api/orders/carrier-account/map/ | Get Carrier Account list |
-| [**restApiOrdersCarrierMapGet()**](OrderApi.md#restApiOrdersCarrierMapGet) | **GET** /rest/api/orders/carrier/map/ | Get list of Carrier |
-| [**restApiOrdersDocumentsMapGet()**](OrderApi.md#restApiOrdersDocumentsMapGet) | **GET** /rest/api/orders/documents/map/ | Get document types map |
-| [**restApiOrdersGet()**](OrderApi.md#restApiOrdersGet) | **GET** /rest/api/orders/ | Get simple list of orders |
-| [**restApiOrdersIdDocumentsDocumentDelete()**](OrderApi.md#restApiOrdersIdDocumentsDocumentDelete) | **DELETE** /rest/api/orders/{id}/documents/{document}/ | Delete document for given order |
-| [**restApiOrdersIdDocumentsDocumentGet()**](OrderApi.md#restApiOrdersIdDocumentsDocumentGet) | **GET** /rest/api/orders/{id}/documents/{document}/ | Order Document detail |
-| [**restApiOrdersIdDocumentsGet()**](OrderApi.md#restApiOrdersIdDocumentsGet) | **GET** /rest/api/orders/{id}/documents/ | Get simple list of documents for given order |
-| [**restApiOrdersIdDocumentsPost()**](OrderApi.md#restApiOrdersIdDocumentsPost) | **POST** /rest/api/orders/{id}/documents/ | Create document for order |
-| [**restApiOrdersIdGet()**](OrderApi.md#restApiOrdersIdGet) | **GET** /rest/api/orders/{id}/ | Get detailed order by given ID |
-| [**restApiOrdersIdMediaDocumentGet()**](OrderApi.md#restApiOrdersIdMediaDocumentGet) | **GET** /rest/api/orders/{id}/media/{document}/ | Binary document |
-| [**restApiOrdersIdNoteGet()**](OrderApi.md#restApiOrdersIdNoteGet) | **GET** /rest/api/orders/{id}/note/ | Get order notes |
-| [**restApiOrdersIdNotePost()**](OrderApi.md#restApiOrdersIdNotePost) | **POST** /rest/api/orders/{id}/note/ | Add note to order |
-| [**restApiOrdersIdPaymentPost()**](OrderApi.md#restApiOrdersIdPaymentPost) | **POST** /rest/api/orders/{id}/payment/ | Add payment to Order |
-| [**restApiOrdersIdShipmentGet()**](OrderApi.md#restApiOrdersIdShipmentGet) | **GET** /rest/api/orders/{id}/shipment/ | List of order shipments |
-| [**restApiOrdersIdShipmentPost()**](OrderApi.md#restApiOrdersIdShipmentPost) | **POST** /rest/api/orders/{id}/shipment/ | Add shipment to order |
-| [**restApiOrdersIdShipmentShipmentGet()**](OrderApi.md#restApiOrdersIdShipmentShipmentGet) | **GET** /rest/api/orders/{id}/shipment/{shipment}/ | Shipment detail |
-| [**restApiOrdersIdStatusPut()**](OrderApi.md#restApiOrdersIdStatusPut) | **PUT** /rest/api/orders/{id}/status/ | Update order status |
-| [**restApiOrdersOrderTagGet()**](OrderApi.md#restApiOrdersOrderTagGet) | **GET** /rest/api/orders/{order}/tag/ | Order tags list |
-| [**restApiOrdersOrderTagPost()**](OrderApi.md#restApiOrdersOrderTagPost) | **POST** /rest/api/orders/{order}/tag/ | Create order tag |
-| [**restApiOrdersOrderTagTagDelete()**](OrderApi.md#restApiOrdersOrderTagTagDelete) | **DELETE** /rest/api/orders/{order}/tag/{tag}/ | Delete order tag |
-| [**restApiOrdersPaymentMapGet()**](OrderApi.md#restApiOrdersPaymentMapGet) | **GET** /rest/api/orders/payment/map/ | Get Payment types list |
-| [**restApiOrdersPlatformMapGet()**](OrderApi.md#restApiOrdersPlatformMapGet) | **GET** /rest/api/orders/platform/map/ | Get Platform list |
-| [**restApiOrdersPost()**](OrderApi.md#restApiOrdersPost) | **POST** /rest/api/orders/ | Create a new order |
-| [**restApiOrdersShipmentStatusMapGet()**](OrderApi.md#restApiOrdersShipmentStatusMapGet) | **GET** /rest/api/orders/shipment/status/map/ | Get shipment status map |
-| [**restApiOrdersStatusMapGet()**](OrderApi.md#restApiOrdersStatusMapGet) | **GET** /rest/api/orders/status/map/ | Get order Status types list |
-| [**restApiOrdersTagMapGet()**](OrderApi.md#restApiOrdersTagMapGet) | **GET** /rest/api/orders/tag/map/ | Tag list |
+| [**deleteRestOrderDocumentsDelete()**](OrderApi.md#deleteRestOrderDocumentsDelete) | **DELETE** /rest/api/orders/{id}/documents/{document}/ | Delete document for given order. |
+| [**deleteRestOrdersOrderTagDelete()**](OrderApi.md#deleteRestOrdersOrderTagDelete) | **DELETE** /rest/api/orders/{orderId}/tag/{tagId}/ | Delete order tag. |
+| [**getRestDocumentsMap()**](OrderApi.md#getRestDocumentsMap) | **GET** /rest/api/orders/documents/map/ | Get document types map. |
+| [**getRestOrderDocumentsDetail()**](OrderApi.md#getRestOrderDocumentsDetail) | **GET** /rest/api/orders/{id}/documents/{document}/ | Order Document detail. |
+| [**getRestOrderDocumentsIndex()**](OrderApi.md#getRestOrderDocumentsIndex) | **GET** /rest/api/orders/{id}/documents/ | Get simple list of documents for given order. |
+| [**getRestOrdersCarrierAccountMap()**](OrderApi.md#getRestOrdersCarrierAccountMap) | **GET** /rest/api/orders/carrier-account/map/ | Get Carrier Account list. |
+| [**getRestOrdersCarrierMap()**](OrderApi.md#getRestOrdersCarrierMap) | **GET** /rest/api/orders/carrier/map/ | Get list of Carrier. |
+| [**getRestOrdersDetail()**](OrderApi.md#getRestOrdersDetail) | **GET** /rest/api/orders/{id}/ | Get detailed order by given ID. |
+| [**getRestOrdersIndex()**](OrderApi.md#getRestOrdersIndex) | **GET** /rest/api/orders/ | Get simple list of orders. |
+| [**getRestOrdersOrderNoteList()**](OrderApi.md#getRestOrdersOrderNoteList) | **GET** /rest/api/orders/{id}/note/ | Get order notes. |
+| [**getRestOrdersOrderTagList()**](OrderApi.md#getRestOrdersOrderTagList) | **GET** /rest/api/orders/{orderId}/tag/ | Order tags list. |
+| [**getRestOrdersPaymentMap()**](OrderApi.md#getRestOrdersPaymentMap) | **GET** /rest/api/orders/payment/map/ | Get Payment types list. |
+| [**getRestOrdersPlatformMap()**](OrderApi.md#getRestOrdersPlatformMap) | **GET** /rest/api/orders/platform/map/ | Get Platform list. |
+| [**getRestOrdersRawMedia()**](OrderApi.md#getRestOrdersRawMedia) | **GET** /rest/api/orders/{id}/media/{document}/ | Order Binary document. |
+| [**getRestOrdersShipmentDetail()**](OrderApi.md#getRestOrdersShipmentDetail) | **GET** /rest/api/orders/{id}/shipment/{shipment}/ | Shipment detail. |
+| [**getRestOrdersShipmentList()**](OrderApi.md#getRestOrdersShipmentList) | **GET** /rest/api/orders/{id}/shipment/ | List of order shipments. |
+| [**getRestOrdersShipmentStatusMap()**](OrderApi.md#getRestOrdersShipmentStatusMap) | **GET** /rest/api/orders/shipment/status/map/ | Get shipment status map. |
+| [**getRestOrdersStatusMap()**](OrderApi.md#getRestOrdersStatusMap) | **GET** /rest/api/orders/status/map/ | Get order Status types list. |
+| [**getRestOrdersTagList()**](OrderApi.md#getRestOrdersTagList) | **GET** /rest/api/orders/tag/map/ | Tag list. |
+| [**postRestOrderDocumentsCreate()**](OrderApi.md#postRestOrderDocumentsCreate) | **POST** /rest/api/orders/{id}/documents/ | Create document for order. |
+| [**postRestOrdersCreate()**](OrderApi.md#postRestOrdersCreate) | **POST** /rest/api/orders/ | Create a new order. |
+| [**postRestOrdersOrderNoteCreate()**](OrderApi.md#postRestOrdersOrderNoteCreate) | **POST** /rest/api/orders/{id}/note/ | Add note to order. |
+| [**postRestOrdersOrderTagCreate()**](OrderApi.md#postRestOrdersOrderTagCreate) | **POST** /rest/api/orders/{orderId}/tag/ | Create order tag. |
+| [**postRestOrdersPaymentCreate()**](OrderApi.md#postRestOrdersPaymentCreate) | **POST** /rest/api/orders/{id}/payment/ | Add payment to Order. |
+| [**postRestOrdersShipmentCreate()**](OrderApi.md#postRestOrdersShipmentCreate) | **POST** /rest/api/orders/{id}/shipment/ | Add shipment to order. |
+| [**putRestOrdersStatusChange()**](OrderApi.md#putRestOrdersStatusChange) | **PUT** /rest/api/orders/{id}/status/ | Update order status. |
 
 
-## `restApiOrdersCarrierAccountMapGet()`
+## `deleteRestOrderDocumentsDelete()`
 
 ```php
-restApiOrdersCarrierAccountMapGet(): \OpenAPI\Client\Model\MappingDTO[]
+deleteRestOrderDocumentsDelete($id, $document): mixed
 ```
 
-Get Carrier Account list
+Delete document for given order.
 
 ### Example
 
@@ -47,36 +47,41 @@ Get Carrier Account list
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
+$apiInstance = new Apilo\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
+$id = 'id_example'; // string | order number in Apilo system, e.g. <code>AL0012345</code>
+$document = 'document_example'; // string | ID of the document belongs to the Apilo order
 
 try {
-    $result = $apiInstance->restApiOrdersCarrierAccountMapGet();
+    $result = $apiInstance->deleteRestOrderDocumentsDelete($id, $document);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrderApi->restApiOrdersCarrierAccountMapGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrderApi->deleteRestOrderDocumentsDelete: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| order number in Apilo system, e.g. &lt;code&gt;AL0012345&lt;/code&gt; | |
+| **document** | **string**| ID of the document belongs to the Apilo order | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MappingDTO[]**](../Model/MappingDTO.md)
+**mixed**
 
 ### Authorization
 
-[OAuth2](../../README.md#OAuth2)
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -87,13 +92,15 @@ This endpoint does not need any parameter.
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `restApiOrdersCarrierMapGet()`
+## `deleteRestOrdersOrderTagDelete()`
 
 ```php
-restApiOrdersCarrierMapGet(): \OpenAPI\Client\Model\MappingDTO[]
+deleteRestOrdersOrderTagDelete($order_id, $tag_id)
 ```
 
-Get list of Carrier
+Delete order tag.
+
+Delete order tag
 
 ### Example
 
@@ -102,36 +109,40 @@ Get list of Carrier
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
+$apiInstance = new Apilo\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
+$order_id = 'order_id_example'; // string | Order ID
+$tag_id = 'tag_id_example'; // string | Tag ID
 
 try {
-    $result = $apiInstance->restApiOrdersCarrierMapGet();
-    print_r($result);
+    $apiInstance->deleteRestOrdersOrderTagDelete($order_id, $tag_id);
 } catch (Exception $e) {
-    echo 'Exception when calling OrderApi->restApiOrdersCarrierMapGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrderApi->deleteRestOrdersOrderTagDelete: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **order_id** | **string**| Order ID | |
+| **tag_id** | **string**| Tag ID | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MappingDTO[]**](../Model/MappingDTO.md)
+void (empty response body)
 
 ### Authorization
 
-[OAuth2](../../README.md#OAuth2)
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -142,13 +153,13 @@ This endpoint does not need any parameter.
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `restApiOrdersDocumentsMapGet()`
+## `getRestDocumentsMap()`
 
 ```php
-restApiOrdersDocumentsMapGet(): \OpenAPI\Client\Model\RestApiOrdersDocumentsMapGet200ResponseInner[]
+getRestDocumentsMap(): \Apilo\Model\MappingDTO[]
 ```
 
-Get document types map
+Get document types map.
 
 Document types map
 
@@ -159,11 +170,11 @@ Document types map
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
+$apiInstance = new Apilo\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -171,10 +182,10 @@ $apiInstance = new OpenAPI\Client\Api\OrderApi(
 );
 
 try {
-    $result = $apiInstance->restApiOrdersDocumentsMapGet();
+    $result = $apiInstance->getRestDocumentsMap();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrderApi->restApiOrdersDocumentsMapGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrderApi->getRestDocumentsMap: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -184,11 +195,11 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\RestApiOrdersDocumentsMapGet200ResponseInner[]**](../Model/RestApiOrdersDocumentsMapGet200ResponseInner.md)
+[**\Apilo\Model\MappingDTO[]**](../Model/MappingDTO.md)
 
 ### Authorization
 
-[OAuth2](../../README.md#OAuth2)
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -199,156 +210,13 @@ This endpoint does not need any parameter.
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `restApiOrdersGet()`
+## `getRestOrderDocumentsDetail()`
 
 ```php
-restApiOrdersGet($created_after, $created_before, $ordered_after, $ordered_before, $updated_after, $updated_before, $is_order_document, $id, $id_external, $order_status, $sort, $offset, $limit): \OpenAPI\Client\Model\RestApiOrdersGet200Response
+getRestOrderDocumentsDetail($id, $document): \Apilo\Model\RestOrderDocumentDTO2
 ```
 
-Get simple list of orders
-
-Example URL for filters and sort: <code>/rest/api/orders/?orderStatus=7&createdAfter=2022-03-01T14%3A40%3A33%2B0200&order&sort=updatedAtDesc</code><br><br>     The fields orderItems and addressCustomer will be returned conditionally from end of 2022
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$created_after = 'created_after_example'; // string | date of order creation from in Apilo, takes the value of ISO 8601 date encoded to URL, e.g. <code>2022-03-01T14:40:33%2B0200</code>
-$created_before = 'created_before_example'; // string | date of order creation from customer, takes the value of ISO 8601 date encoded to URL, e.g. <code>2022-03-01T14:40:33%2B0200</code>
-$ordered_after = 'ordered_after_example'; // string | date of order to customer, takes the value of ISO 8601 date encoded to URL, e.g. <code>2022-03-01T14:40:33%2B0200</code>
-$ordered_before = 'ordered_before_example'; // string | update date from in Apilo system, takes the value of ISO 8601 date encoded to URL, e.g. <code>2022-03-01T14:40:33%2B0200</code>
-$updated_after = 'updated_after_example'; // string | update date to in Apilo system, takes the value of ISO 8601 date encoded to URL, e.g. <code>2022-03-01T14:40:33%2B0200</code>
-$updated_before = 'updated_before_example'; // string | update date from in Apilo system, takes the value of ISO 8601 date encoded to URL, e.g. <code>2022-03-01T14:40:33%2B0200</code>
-$is_order_document = 56; // int | determines whether a document exists for the order, takes the value of 1 or 0
-$id = 'id_example'; // string | order number in Apilo system, e.g. <code>AL0012345</code>
-$id_external = 'id_external_example'; // string | external order number, e.g. <code>5200669628624</code>
-$order_status = 56; // int | Order status according to the <a href='#tag/order/paths/~1rest~1api~1orders~1status~1map~1/get'>order status map</a>
-$sort = 'sort_example'; // string | Sort options
-$offset = 56; // int | Position indicator (0-beginning, 1-skips one record, 256 - skips 256 records)
-$limit = 56; // int | Limit of returned results, max 512 records
-
-try {
-    $result = $apiInstance->restApiOrdersGet($created_after, $created_before, $ordered_after, $ordered_before, $updated_after, $updated_before, $is_order_document, $id, $id_external, $order_status, $sort, $offset, $limit);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling OrderApi->restApiOrdersGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **created_after** | **string**| date of order creation from in Apilo, takes the value of ISO 8601 date encoded to URL, e.g. &lt;code&gt;2022-03-01T14:40:33%2B0200&lt;/code&gt; | [optional] |
-| **created_before** | **string**| date of order creation from customer, takes the value of ISO 8601 date encoded to URL, e.g. &lt;code&gt;2022-03-01T14:40:33%2B0200&lt;/code&gt; | [optional] |
-| **ordered_after** | **string**| date of order to customer, takes the value of ISO 8601 date encoded to URL, e.g. &lt;code&gt;2022-03-01T14:40:33%2B0200&lt;/code&gt; | [optional] |
-| **ordered_before** | **string**| update date from in Apilo system, takes the value of ISO 8601 date encoded to URL, e.g. &lt;code&gt;2022-03-01T14:40:33%2B0200&lt;/code&gt; | [optional] |
-| **updated_after** | **string**| update date to in Apilo system, takes the value of ISO 8601 date encoded to URL, e.g. &lt;code&gt;2022-03-01T14:40:33%2B0200&lt;/code&gt; | [optional] |
-| **updated_before** | **string**| update date from in Apilo system, takes the value of ISO 8601 date encoded to URL, e.g. &lt;code&gt;2022-03-01T14:40:33%2B0200&lt;/code&gt; | [optional] |
-| **is_order_document** | **int**| determines whether a document exists for the order, takes the value of 1 or 0 | [optional] |
-| **id** | **string**| order number in Apilo system, e.g. &lt;code&gt;AL0012345&lt;/code&gt; | [optional] |
-| **id_external** | **string**| external order number, e.g. &lt;code&gt;5200669628624&lt;/code&gt; | [optional] |
-| **order_status** | **int**| Order status according to the &lt;a href&#x3D;&#39;#tag/order/paths/~1rest~1api~1orders~1status~1map~1/get&#39;&gt;order status map&lt;/a&gt; | [optional] |
-| **sort** | **string**| Sort options | [optional] |
-| **offset** | **int**| Position indicator (0-beginning, 1-skips one record, 256 - skips 256 records) | [optional] |
-| **limit** | **int**| Limit of returned results, max 512 records | [optional] |
-
-### Return type
-
-[**\OpenAPI\Client\Model\RestApiOrdersGet200Response**](../Model/RestApiOrdersGet200Response.md)
-
-### Authorization
-
-[OAuth2](../../README.md#OAuth2)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `restApiOrdersIdDocumentsDocumentDelete()`
-
-```php
-restApiOrdersIdDocumentsDocumentDelete($id, $document)
-```
-
-Delete document for given order
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$id = 'id_example'; // string | order number in Apilo system, e.g. <code>AL0012345</code>
-$document = 56; // int | ID of the document belongs to the Apilo order
-
-try {
-    $apiInstance->restApiOrdersIdDocumentsDocumentDelete($id, $document);
-} catch (Exception $e) {
-    echo 'Exception when calling OrderApi->restApiOrdersIdDocumentsDocumentDelete: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| order number in Apilo system, e.g. &lt;code&gt;AL0012345&lt;/code&gt; | |
-| **document** | **int**| ID of the document belongs to the Apilo order | |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[OAuth2](../../README.md#OAuth2)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `restApiOrdersIdDocumentsDocumentGet()`
-
-```php
-restApiOrdersIdDocumentsDocumentGet($id, $document): \OpenAPI\Client\Model\RestOrderDocumentDTO2
-```
-
-Order Document detail
+Order Document detail.
 
 Get detailed document by Id for given Order
 
@@ -359,24 +227,24 @@ Get detailed document by Id for given Order
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
+$apiInstance = new Apilo\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 'id_example'; // string | order number in Apilo system, e.g. <code>AL0012345</code>
-$document = 56; // int | ID of the document belongs to the Apilo order
+$document = 'document_example'; // string | ID of the document belongs to the Apilo order
 
 try {
-    $result = $apiInstance->restApiOrdersIdDocumentsDocumentGet($id, $document);
+    $result = $apiInstance->getRestOrderDocumentsDetail($id, $document);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrderApi->restApiOrdersIdDocumentsDocumentGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrderApi->getRestOrderDocumentsDetail: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -385,15 +253,15 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| order number in Apilo system, e.g. &lt;code&gt;AL0012345&lt;/code&gt; | |
-| **document** | **int**| ID of the document belongs to the Apilo order | |
+| **document** | **string**| ID of the document belongs to the Apilo order | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\RestOrderDocumentDTO2**](../Model/RestOrderDocumentDTO2.md)
+[**\Apilo\Model\RestOrderDocumentDTO2**](../Model/RestOrderDocumentDTO2.md)
 
 ### Authorization
 
-[OAuth2](../../README.md#OAuth2)
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -404,13 +272,13 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `restApiOrdersIdDocumentsGet()`
+## `getRestOrderDocumentsIndex()`
 
 ```php
-restApiOrdersIdDocumentsGet($id, $id2, $id_external, $number, $type, $created_after, $created_before, $offset, $limit): \OpenAPI\Client\Model\RestApiOrdersIdDocumentsGet200Response
+getRestOrderDocumentsIndex($id, $id2, $id_external, $number, $type, $created_after, $created_before, $offset, $limit): \Apilo\Model\GetRestOrderDocumentsIndex200Response
 ```
 
-Get simple list of documents for given order
+Get simple list of documents for given order.
 
 List of documents belongs to the indicated order
 
@@ -421,31 +289,31 @@ List of documents belongs to the indicated order
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
+$apiInstance = new Apilo\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | order number in Apilo system, e.g. <code>AL0012345</code>
-$id2 = 56; // int | ID of the document
-$id_external = 'id_external_example'; // string | External unique ID of the document
-$number = 'number_example'; // string | External document number
-$type = 56; // int | Document type - <a href='#tag/order/paths/~1rest~1api~1orders~1documents~1map~1/get'>order document types endpoint</a>
-$created_after = 'created_after_example'; // string | start date of document creation in Apilo, takes the value of ISO 8601 date encoded to URL, e.g. <code>2022-03-01T14:40:33%2B0200</code>
-$created_before = 'created_before_example'; // string | end date of document creation in Apilo, takes the value of ISO 8601 date encoded to URL, e.g. <code>2022-03-01T14:40:33%2B0200</code>
-$offset = 56; // int | Position indicator (0-beginning, 1-skips one record, 256 - skips 256 records)
-$limit = 56; // int | Limit of returned results, max 512 records
+$id = 'id_example'; // string
+$id2 = NULL; // mixed | ID of the document
+$id_external = NULL; // mixed | External unique ID of the document
+$number = 56; // int
+$type = 56; // int
+$created_after = NULL; // mixed | start date of document creation in Apilo, takes the value of ISO 8601 date encoded to URL, e.g. <code>2022-03-01T14:40:33%2B0200</code>
+$created_before = NULL; // mixed | end date of document creation in Apilo, takes the value of ISO 8601 date encoded to URL, e.g. <code>2022-03-01T14:40:33%2B0200</code>
+$offset = NULL; // mixed | Position indicator (0-beginning, 1-skips one record, 256 - skips 256 records)
+$limit = NULL; // mixed | Limit of returned results, max 512 records
 
 try {
-    $result = $apiInstance->restApiOrdersIdDocumentsGet($id, $id2, $id_external, $number, $type, $created_after, $created_before, $offset, $limit);
+    $result = $apiInstance->getRestOrderDocumentsIndex($id, $id2, $id_external, $number, $type, $created_after, $created_before, $offset, $limit);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrderApi->restApiOrdersIdDocumentsGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrderApi->getRestOrderDocumentsIndex: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -453,23 +321,23 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| order number in Apilo system, e.g. &lt;code&gt;AL0012345&lt;/code&gt; | |
-| **id2** | **int**| ID of the document | [optional] |
-| **id_external** | **string**| External unique ID of the document | [optional] |
-| **number** | **string**| External document number | [optional] |
-| **type** | **int**| Document type - &lt;a href&#x3D;&#39;#tag/order/paths/~1rest~1api~1orders~1documents~1map~1/get&#39;&gt;order document types endpoint&lt;/a&gt; | [optional] |
-| **created_after** | **string**| start date of document creation in Apilo, takes the value of ISO 8601 date encoded to URL, e.g. &lt;code&gt;2022-03-01T14:40:33%2B0200&lt;/code&gt; | [optional] |
-| **created_before** | **string**| end date of document creation in Apilo, takes the value of ISO 8601 date encoded to URL, e.g. &lt;code&gt;2022-03-01T14:40:33%2B0200&lt;/code&gt; | [optional] |
-| **offset** | **int**| Position indicator (0-beginning, 1-skips one record, 256 - skips 256 records) | [optional] |
-| **limit** | **int**| Limit of returned results, max 512 records | [optional] |
+| **id** | **string**|  | |
+| **id2** | [**mixed**](../Model/.md)| ID of the document | [optional] |
+| **id_external** | [**mixed**](../Model/.md)| External unique ID of the document | [optional] |
+| **number** | **int**|  | [optional] |
+| **type** | **int**|  | [optional] |
+| **created_after** | [**mixed**](../Model/.md)| start date of document creation in Apilo, takes the value of ISO 8601 date encoded to URL, e.g. &lt;code&gt;2022-03-01T14:40:33%2B0200&lt;/code&gt; | [optional] |
+| **created_before** | [**mixed**](../Model/.md)| end date of document creation in Apilo, takes the value of ISO 8601 date encoded to URL, e.g. &lt;code&gt;2022-03-01T14:40:33%2B0200&lt;/code&gt; | [optional] |
+| **offset** | [**mixed**](../Model/.md)| Position indicator (0-beginning, 1-skips one record, 256 - skips 256 records) | [optional] |
+| **limit** | [**mixed**](../Model/.md)| Limit of returned results, max 512 records | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\RestApiOrdersIdDocumentsGet200Response**](../Model/RestApiOrdersIdDocumentsGet200Response.md)
+[**\Apilo\Model\GetRestOrderDocumentsIndex200Response**](../Model/GetRestOrderDocumentsIndex200Response.md)
 
 ### Authorization
 
-[OAuth2](../../README.md#OAuth2)
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -480,13 +348,15 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `restApiOrdersIdDocumentsPost()`
+## `getRestOrdersCarrierAccountMap()`
 
 ```php
-restApiOrdersIdDocumentsPost($id, $body): \OpenAPI\Client\Model\RestOrderDocumentDTO2
+getRestOrdersCarrierAccountMap(): \Apilo\Model\MappingDTO[]
 ```
 
-Create document for order
+Get Carrier Account list.
+
+Get Carrrier Account List
 
 ### Example
 
@@ -495,41 +365,36 @@ Create document for order
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
+$apiInstance = new Apilo\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | order number in Apilo system, e.g. <code>AL0012345</code>
-$body = new \OpenAPI\Client\Model\RestOrderDocumentDTO3(); // \OpenAPI\Client\Model\RestOrderDocumentDTO3
 
 try {
-    $result = $apiInstance->restApiOrdersIdDocumentsPost($id, $body);
+    $result = $apiInstance->getRestOrdersCarrierAccountMap();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrderApi->restApiOrdersIdDocumentsPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrderApi->getRestOrdersCarrierAccountMap: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| order number in Apilo system, e.g. &lt;code&gt;AL0012345&lt;/code&gt; | |
-| **body** | [**\OpenAPI\Client\Model\RestOrderDocumentDTO3**](../Model/RestOrderDocumentDTO3.md)|  | |
+This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\RestOrderDocumentDTO2**](../Model/RestOrderDocumentDTO2.md)
+[**\Apilo\Model\MappingDTO[]**](../Model/MappingDTO.md)
 
 ### Authorization
 
-[OAuth2](../../README.md#OAuth2)
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -540,13 +405,13 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `restApiOrdersIdGet()`
+## `getRestOrdersCarrierMap()`
 
 ```php
-restApiOrdersIdGet($id): \OpenAPI\Client\Model\RestOrderReadDTO2
+getRestOrdersCarrierMap(): \Apilo\Model\MappingDTO[]
 ```
 
-Get detailed order by given ID
+Get list of Carrier.
 
 ### Example
 
@@ -555,39 +420,36 @@ Get detailed order by given ID
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
+$apiInstance = new Apilo\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | order number in Apilo system, e.g. <code>AL0012345</code>
 
 try {
-    $result = $apiInstance->restApiOrdersIdGet($id);
+    $result = $apiInstance->getRestOrdersCarrierMap();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrderApi->restApiOrdersIdGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrderApi->getRestOrdersCarrierMap: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| order number in Apilo system, e.g. &lt;code&gt;AL0012345&lt;/code&gt; | |
+This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\RestOrderReadDTO2**](../Model/RestOrderReadDTO2.md)
+[**\Apilo\Model\MappingDTO[]**](../Model/MappingDTO.md)
 
 ### Authorization
 
-[OAuth2](../../README.md#OAuth2)
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -598,15 +460,13 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `restApiOrdersIdMediaDocumentGet()`
+## `getRestOrdersDetail()`
 
 ```php
-restApiOrdersIdMediaDocumentGet($id, $document): \SplFileObject
+getRestOrdersDetail($id): \Apilo\Model\RestOrderReadDTO
 ```
 
-Binary document
-
-Binary contents of the document (or shipment label) file belongs to the specified order
+Get detailed order by given ID.
 
 ### Example
 
@@ -615,24 +475,23 @@ Binary contents of the document (or shipment label) file belongs to the specifie
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
+$apiInstance = new Apilo\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 'id_example'; // string | order number in Apilo system, e.g. <code>AL0012345</code>
-$document = 56; // int | ID of the document or shipment belongs to the Apilo order
 
 try {
-    $result = $apiInstance->restApiOrdersIdMediaDocumentGet($id, $document);
+    $result = $apiInstance->getRestOrdersDetail($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrderApi->restApiOrdersIdMediaDocumentGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrderApi->getRestOrdersDetail: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -641,15 +500,14 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| order number in Apilo system, e.g. &lt;code&gt;AL0012345&lt;/code&gt; | |
-| **document** | **int**| ID of the document or shipment belongs to the Apilo order | |
 
 ### Return type
 
-**\SplFileObject**
+[**\Apilo\Model\RestOrderReadDTO**](../Model/RestOrderReadDTO.md)
 
 ### Authorization
 
-[OAuth2](../../README.md#OAuth2)
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -660,13 +518,15 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `restApiOrdersIdNoteGet()`
+## `getRestOrdersIndex()`
 
 ```php
-restApiOrdersIdNoteGet($id): \OpenAPI\Client\Model\RestOrderNoteDTO[]
+getRestOrdersIndex($created_after, $created_before, $ordered_after, $ordered_before, $updated_after, $updated_before, $is_order_document, $id, $id_external, $order_status, $order_status_ids, $sort, $offset, $limit): \Apilo\Model\GetRestOrdersIndex200Response
 ```
 
-Get order notes
+Get simple list of orders.
+
+Example URL for filters and sort: <code>/rest/api/orders/?orderStatus=7&createdAfter=2022-03-01T14%3A40%3A33%2B0200&order&sort=updatedAtDesc</code><br><br>     The fields orderItems and addressCustomer will be returned conditionally from end of 2022
 
 ### Example
 
@@ -675,23 +535,36 @@ Get order notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
+$apiInstance = new Apilo\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | order number in Apilo system, e.g. <code>AL0012345</code>
+$created_after = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime
+$created_before = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime
+$ordered_after = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime
+$ordered_before = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime
+$updated_after = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime
+$updated_before = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime
+$is_order_document = 56; // int
+$id = 'id_example'; // string
+$id_external = 'id_external_example'; // string
+$order_status = 56; // int
+$order_status_ids = array(56); // int[]
+$sort = 56; // int | Sort options
+$offset = 56; // int
+$limit = 56; // int
 
 try {
-    $result = $apiInstance->restApiOrdersIdNoteGet($id);
+    $result = $apiInstance->getRestOrdersIndex($created_after, $created_before, $ordered_after, $ordered_before, $updated_after, $updated_before, $is_order_document, $id, $id_external, $order_status, $order_status_ids, $sort, $offset, $limit);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrderApi->restApiOrdersIdNoteGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrderApi->getRestOrdersIndex: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -699,15 +572,28 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| order number in Apilo system, e.g. &lt;code&gt;AL0012345&lt;/code&gt; | |
+| **created_after** | **\DateTime**|  | [optional] |
+| **created_before** | **\DateTime**|  | [optional] |
+| **ordered_after** | **\DateTime**|  | [optional] |
+| **ordered_before** | **\DateTime**|  | [optional] |
+| **updated_after** | **\DateTime**|  | [optional] |
+| **updated_before** | **\DateTime**|  | [optional] |
+| **is_order_document** | **int**|  | [optional] |
+| **id** | **string**|  | [optional] |
+| **id_external** | **string**|  | [optional] |
+| **order_status** | **int**|  | [optional] |
+| **order_status_ids** | [**int[]**](../Model/int.md)|  | [optional] |
+| **sort** | **int**| Sort options | [optional] |
+| **offset** | **int**|  | [optional] |
+| **limit** | **int**|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\RestOrderNoteDTO[]**](../Model/RestOrderNoteDTO.md)
+[**\Apilo\Model\GetRestOrdersIndex200Response**](../Model/GetRestOrdersIndex200Response.md)
 
 ### Authorization
 
-[OAuth2](../../README.md#OAuth2)
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -718,13 +604,13 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `restApiOrdersIdNotePost()`
+## `getRestOrdersOrderNoteList()`
 
 ```php
-restApiOrdersIdNotePost($id, $body)
+getRestOrdersOrderNoteList($id): \Apilo\Model\RestOrderNoteDTO
 ```
 
-Add note to order
+Get order notes.
 
 ### Example
 
@@ -733,145 +619,23 @@ Add note to order
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
+$apiInstance = new Apilo\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 'id_example'; // string | order number in Apilo system, e.g. <code>AL0012345</code>
-$body = new \OpenAPI\Client\Model\RestOrderNoteDTO2(); // \OpenAPI\Client\Model\RestOrderNoteDTO2
 
 try {
-    $apiInstance->restApiOrdersIdNotePost($id, $body);
-} catch (Exception $e) {
-    echo 'Exception when calling OrderApi->restApiOrdersIdNotePost: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| order number in Apilo system, e.g. &lt;code&gt;AL0012345&lt;/code&gt; | |
-| **body** | [**\OpenAPI\Client\Model\RestOrderNoteDTO2**](../Model/RestOrderNoteDTO2.md)|  | [optional] |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[OAuth2](../../README.md#OAuth2)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `restApiOrdersIdPaymentPost()`
-
-```php
-restApiOrdersIdPaymentPost($id, $body)
-```
-
-Add payment to Order
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$id = 'id_example'; // string | order number in Apilo system, e.g. <code>AL0012345</code>
-$body = new \OpenAPI\Client\Model\RestOrderPaymentsDTO(); // \OpenAPI\Client\Model\RestOrderPaymentsDTO
-
-try {
-    $apiInstance->restApiOrdersIdPaymentPost($id, $body);
-} catch (Exception $e) {
-    echo 'Exception when calling OrderApi->restApiOrdersIdPaymentPost: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| order number in Apilo system, e.g. &lt;code&gt;AL0012345&lt;/code&gt; | |
-| **body** | [**\OpenAPI\Client\Model\RestOrderPaymentsDTO**](../Model/RestOrderPaymentsDTO.md)|  | |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[OAuth2](../../README.md#OAuth2)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `restApiOrdersIdShipmentGet()`
-
-```php
-restApiOrdersIdShipmentGet($id, $offset, $limit): \OpenAPI\Client\Model\RestApiOrdersIdShipmentGet200Response
-```
-
-List of order shipments
-
-List of shipments belongs to the indicated order
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$id = 'id_example'; // string | order number in Apilo system, e.g. <code>AL0012345</code>
-$offset = 56; // int | Position indicator (0-beginning, 1-skips one record, 256 - skips 256 records)
-$limit = 56; // int | Limit of returned results, max 512 records
-
-try {
-    $result = $apiInstance->restApiOrdersIdShipmentGet($id, $offset, $limit);
+    $result = $apiInstance->getRestOrdersOrderNoteList($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrderApi->restApiOrdersIdShipmentGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrderApi->getRestOrdersOrderNoteList: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -880,16 +644,14 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| order number in Apilo system, e.g. &lt;code&gt;AL0012345&lt;/code&gt; | |
-| **offset** | **int**| Position indicator (0-beginning, 1-skips one record, 256 - skips 256 records) | [optional] |
-| **limit** | **int**| Limit of returned results, max 512 records | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\RestApiOrdersIdShipmentGet200Response**](../Model/RestApiOrdersIdShipmentGet200Response.md)
+[**\Apilo\Model\RestOrderNoteDTO**](../Model/RestOrderNoteDTO.md)
 
 ### Authorization
 
-[OAuth2](../../README.md#OAuth2)
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -900,197 +662,13 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `restApiOrdersIdShipmentPost()`
+## `getRestOrdersOrderTagList()`
 
 ```php
-restApiOrdersIdShipmentPost($id, $body): \OpenAPI\Client\Model\RestOrderShipmentDTO2
+getRestOrdersOrderTagList($order_id, $offset, $limit): \Apilo\Model\RestTagsDTO
 ```
 
-Add shipment to order
-
-Shipment is created as order document, it can be see from <a href='#tag/order/paths/~1rest~1api~1orders~1{orderId}~1documents~1{documentId}~1/get'>here</a>
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$id = 'id_example'; // string | order number in Apilo system, e.g. <code>AL0012345</code>
-$body = new \OpenAPI\Client\Model\RestOrderShipmentDTO3(); // \OpenAPI\Client\Model\RestOrderShipmentDTO3
-
-try {
-    $result = $apiInstance->restApiOrdersIdShipmentPost($id, $body);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling OrderApi->restApiOrdersIdShipmentPost: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| order number in Apilo system, e.g. &lt;code&gt;AL0012345&lt;/code&gt; | |
-| **body** | [**\OpenAPI\Client\Model\RestOrderShipmentDTO3**](../Model/RestOrderShipmentDTO3.md)|  | |
-
-### Return type
-
-[**\OpenAPI\Client\Model\RestOrderShipmentDTO2**](../Model/RestOrderShipmentDTO2.md)
-
-### Authorization
-
-[OAuth2](../../README.md#OAuth2)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `restApiOrdersIdShipmentShipmentGet()`
-
-```php
-restApiOrdersIdShipmentShipmentGet($id, $shipment): \OpenAPI\Client\Model\RestOrderShipmentDTO2
-```
-
-Shipment detail
-
-Detail of specific shipment belongs to given order
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$id = 'id_example'; // string | order number in Apilo system, e.g. <code>AL0012345</code>
-$shipment = 56; // int | ID of the shipment belongs to the Apilo order
-
-try {
-    $result = $apiInstance->restApiOrdersIdShipmentShipmentGet($id, $shipment);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling OrderApi->restApiOrdersIdShipmentShipmentGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| order number in Apilo system, e.g. &lt;code&gt;AL0012345&lt;/code&gt; | |
-| **shipment** | **int**| ID of the shipment belongs to the Apilo order | |
-
-### Return type
-
-[**\OpenAPI\Client\Model\RestOrderShipmentDTO2**](../Model/RestOrderShipmentDTO2.md)
-
-### Authorization
-
-[OAuth2](../../README.md#OAuth2)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `restApiOrdersIdStatusPut()`
-
-```php
-restApiOrdersIdStatusPut($id, $body): \OpenAPI\Client\Model\RestApiOrdersIdStatusPut200Response
-```
-
-Update order status
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$id = 'id_example'; // string | order number in Apilo system, e.g. <code>AL0012345</code>
-$body = new \OpenAPI\Client\Model\RestStatusOrderDTO(); // \OpenAPI\Client\Model\RestStatusOrderDTO
-
-try {
-    $result = $apiInstance->restApiOrdersIdStatusPut($id, $body);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling OrderApi->restApiOrdersIdStatusPut: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| order number in Apilo system, e.g. &lt;code&gt;AL0012345&lt;/code&gt; | |
-| **body** | [**\OpenAPI\Client\Model\RestStatusOrderDTO**](../Model/RestStatusOrderDTO.md)|  | |
-
-### Return type
-
-[**\OpenAPI\Client\Model\RestApiOrdersIdStatusPut200Response**](../Model/RestApiOrdersIdStatusPut200Response.md)
-
-### Authorization
-
-[OAuth2](../../README.md#OAuth2)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `restApiOrdersOrderTagGet()`
-
-```php
-restApiOrdersOrderTagGet($order): \OpenAPI\Client\Model\Tags
-```
-
-Order tags list
+Order tags list.
 
 Order tags list
 
@@ -1101,23 +679,25 @@ Order tags list
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
+$apiInstance = new Apilo\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$order = 'order_example'; // string | Order ID
+$order_id = 'order_id_example'; // string | Order ID
+$offset = 56; // int
+$limit = 56; // int
 
 try {
-    $result = $apiInstance->restApiOrdersOrderTagGet($order);
+    $result = $apiInstance->getRestOrdersOrderTagList($order_id, $offset, $limit);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrderApi->restApiOrdersOrderTagGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrderApi->getRestOrdersOrderTagList: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1125,15 +705,17 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **order** | **string**| Order ID | |
+| **order_id** | **string**| Order ID | |
+| **offset** | **int**|  | [optional] |
+| **limit** | **int**|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Tags**](../Model/Tags.md)
+[**\Apilo\Model\RestTagsDTO**](../Model/RestTagsDTO.md)
 
 ### Authorization
 
-[OAuth2](../../README.md#OAuth2)
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -1144,133 +726,13 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `restApiOrdersOrderTagPost()`
+## `getRestOrdersPaymentMap()`
 
 ```php
-restApiOrdersOrderTagPost($order, $body)
+getRestOrdersPaymentMap(): \Apilo\Model\MappingDTO[]
 ```
 
-Create order tag
-
-Create order tag
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$order = 'order_example'; // string | Order ID
-$body = new \OpenAPI\Client\Model\OrderTagPost(); // \OpenAPI\Client\Model\OrderTagPost
-
-try {
-    $apiInstance->restApiOrdersOrderTagPost($order, $body);
-} catch (Exception $e) {
-    echo 'Exception when calling OrderApi->restApiOrdersOrderTagPost: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **order** | **string**| Order ID | |
-| **body** | [**\OpenAPI\Client\Model\OrderTagPost**](../Model/OrderTagPost.md)|  | |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[OAuth2](../../README.md#OAuth2)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `restApiOrdersOrderTagTagDelete()`
-
-```php
-restApiOrdersOrderTagTagDelete($order, $tag)
-```
-
-Delete order tag
-
-Delete order tag
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$order = 'order_example'; // string | Order ID
-$tag = 56; // int | Tag ID
-
-try {
-    $apiInstance->restApiOrdersOrderTagTagDelete($order, $tag);
-} catch (Exception $e) {
-    echo 'Exception when calling OrderApi->restApiOrdersOrderTagTagDelete: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **order** | **string**| Order ID | |
-| **tag** | **int**| Tag ID | |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[OAuth2](../../README.md#OAuth2)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `restApiOrdersPaymentMapGet()`
-
-```php
-restApiOrdersPaymentMapGet(): \OpenAPI\Client\Model\MappingDTO[]
-```
+Get Payment types list.
 
 Get Payment types list
 
@@ -1281,11 +743,11 @@ Get Payment types list
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
+$apiInstance = new Apilo\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1293,10 +755,10 @@ $apiInstance = new OpenAPI\Client\Api\OrderApi(
 );
 
 try {
-    $result = $apiInstance->restApiOrdersPaymentMapGet();
+    $result = $apiInstance->getRestOrdersPaymentMap();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrderApi->restApiOrdersPaymentMapGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrderApi->getRestOrdersPaymentMap: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1306,11 +768,11 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MappingDTO[]**](../Model/MappingDTO.md)
+[**\Apilo\Model\MappingDTO[]**](../Model/MappingDTO.md)
 
 ### Authorization
 
-[OAuth2](../../README.md#OAuth2)
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -1321,11 +783,13 @@ This endpoint does not need any parameter.
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `restApiOrdersPlatformMapGet()`
+## `getRestOrdersPlatformMap()`
 
 ```php
-restApiOrdersPlatformMapGet(): \OpenAPI\Client\Model\MappingDTO[]
+getRestOrdersPlatformMap(): \Apilo\Model\MappingDTO[]
 ```
+
+Get Platform list.
 
 Get Platform list
 
@@ -1336,11 +800,11 @@ Get Platform list
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
+$apiInstance = new Apilo\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1348,10 +812,10 @@ $apiInstance = new OpenAPI\Client\Api\OrderApi(
 );
 
 try {
-    $result = $apiInstance->restApiOrdersPlatformMapGet();
+    $result = $apiInstance->getRestOrdersPlatformMap();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrderApi->restApiOrdersPlatformMapGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrderApi->getRestOrdersPlatformMap: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1361,11 +825,11 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MappingDTO[]**](../Model/MappingDTO.md)
+[**\Apilo\Model\MappingDTO[]**](../Model/MappingDTO.md)
 
 ### Authorization
 
-[OAuth2](../../README.md#OAuth2)
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -1376,13 +840,15 @@ This endpoint does not need any parameter.
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `restApiOrdersPost()`
+## `getRestOrdersRawMedia()`
 
 ```php
-restApiOrdersPost($body): \OpenAPI\Client\Model\RestApiOrdersPost200Response
+getRestOrdersRawMedia($id, $document)
 ```
 
-Create a new order
+Order Binary document.
+
+Binary contents of the document (or shipment label) file belongs to the specified order
 
 ### Example
 
@@ -1391,23 +857,23 @@ Create a new order
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
+$apiInstance = new Apilo\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \OpenAPI\Client\Model\RestOrderWriteDTO(); // \OpenAPI\Client\Model\RestOrderWriteDTO
+$id = 'id_example'; // string | order number in Apilo system, e.g. <code>AL0012345</code>
+$document = 'document_example'; // string | ID of the document or shipment belongs to the Apilo order
 
 try {
-    $result = $apiInstance->restApiOrdersPost($body);
-    print_r($result);
+    $apiInstance->getRestOrdersRawMedia($id, $document);
 } catch (Exception $e) {
-    echo 'Exception when calling OrderApi->restApiOrdersPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrderApi->getRestOrdersRawMedia: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1415,15 +881,78 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\OpenAPI\Client\Model\RestOrderWriteDTO**](../Model/RestOrderWriteDTO.md)|  | [optional] |
+| **id** | **string**| order number in Apilo system, e.g. &lt;code&gt;AL0012345&lt;/code&gt; | |
+| **document** | **string**| ID of the document or shipment belongs to the Apilo order | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\RestApiOrdersPost200Response**](../Model/RestApiOrdersPost200Response.md)
+void (empty response body)
 
 ### Authorization
 
-[OAuth2](../../README.md#OAuth2)
+[BearerAuth](../../README.md#BearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/pdf`, `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getRestOrdersShipmentDetail()`
+
+```php
+getRestOrdersShipmentDetail($id, $shipment): \Apilo\Model\RestOrderShipmentDTO3
+```
+
+Shipment detail.
+
+Detail of specific shipment belongs to given order
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Apilo\Api\OrderApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = 'id_example'; // string | order number in Apilo system, e.g. <code>AL0012345</code>
+$shipment = 'shipment_example'; // string | ID of the shipment belongs to the Apilo order
+
+try {
+    $result = $apiInstance->getRestOrdersShipmentDetail($id, $shipment);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OrderApi->getRestOrdersShipmentDetail: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| order number in Apilo system, e.g. &lt;code&gt;AL0012345&lt;/code&gt; | |
+| **shipment** | **string**| ID of the shipment belongs to the Apilo order | |
+
+### Return type
+
+[**\Apilo\Model\RestOrderShipmentDTO3**](../Model/RestOrderShipmentDTO3.md)
+
+### Authorization
+
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -1434,13 +963,77 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `restApiOrdersShipmentStatusMapGet()`
+## `getRestOrdersShipmentList()`
 
 ```php
-restApiOrdersShipmentStatusMapGet(): \OpenAPI\Client\Model\RestApiOrdersShipmentStatusMapGet200ResponseInner[]
+getRestOrdersShipmentList($id, $offset, $limit): \Apilo\Model\GetRestOrdersShipmentList200Response
 ```
 
-Get shipment status map
+List of order shipments.
+
+List of shipments belongs to the indicated order
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Apilo\Api\OrderApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = 'id_example'; // string | order number in Apilo system, e.g. <code>AL0012345</code>
+$offset = 56; // int | Position indicator (0-beginning, 1-skips one record, 256 - skips 256 records)
+$limit = 56; // int | Limit of returned results, max 512 records
+
+try {
+    $result = $apiInstance->getRestOrdersShipmentList($id, $offset, $limit);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OrderApi->getRestOrdersShipmentList: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| order number in Apilo system, e.g. &lt;code&gt;AL0012345&lt;/code&gt; | |
+| **offset** | **int**| Position indicator (0-beginning, 1-skips one record, 256 - skips 256 records) | [optional] |
+| **limit** | **int**| Limit of returned results, max 512 records | [optional] |
+
+### Return type
+
+[**\Apilo\Model\GetRestOrdersShipmentList200Response**](../Model/GetRestOrdersShipmentList200Response.md)
+
+### Authorization
+
+[BearerAuth](../../README.md#BearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getRestOrdersShipmentStatusMap()`
+
+```php
+getRestOrdersShipmentStatusMap(): \Apilo\Model\MappingDTO[]
+```
+
+Get shipment status map.
 
 Shipment status map
 
@@ -1451,11 +1044,11 @@ Shipment status map
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
+$apiInstance = new Apilo\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1463,10 +1056,10 @@ $apiInstance = new OpenAPI\Client\Api\OrderApi(
 );
 
 try {
-    $result = $apiInstance->restApiOrdersShipmentStatusMapGet();
+    $result = $apiInstance->getRestOrdersShipmentStatusMap();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrderApi->restApiOrdersShipmentStatusMapGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrderApi->getRestOrdersShipmentStatusMap: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1476,11 +1069,11 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\RestApiOrdersShipmentStatusMapGet200ResponseInner[]**](../Model/RestApiOrdersShipmentStatusMapGet200ResponseInner.md)
+[**\Apilo\Model\MappingDTO[]**](../Model/MappingDTO.md)
 
 ### Authorization
 
-[OAuth2](../../README.md#OAuth2)
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -1491,13 +1084,15 @@ This endpoint does not need any parameter.
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `restApiOrdersStatusMapGet()`
+## `getRestOrdersStatusMap()`
 
 ```php
-restApiOrdersStatusMapGet(): \OpenAPI\Client\Model\MappingDTO[]
+getRestOrdersStatusMap(): \Apilo\Model\MappingDTO[]
 ```
 
-Get order Status types list
+Get order Status types list.
+
+Get Order Status types list
 
 ### Example
 
@@ -1506,11 +1101,11 @@ Get order Status types list
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
+$apiInstance = new Apilo\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1518,10 +1113,10 @@ $apiInstance = new OpenAPI\Client\Api\OrderApi(
 );
 
 try {
-    $result = $apiInstance->restApiOrdersStatusMapGet();
+    $result = $apiInstance->getRestOrdersStatusMap();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrderApi->restApiOrdersStatusMapGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrderApi->getRestOrdersStatusMap: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1531,11 +1126,11 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MappingDTO[]**](../Model/MappingDTO.md)
+[**\Apilo\Model\MappingDTO[]**](../Model/MappingDTO.md)
 
 ### Authorization
 
-[OAuth2](../../README.md#OAuth2)
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -1546,13 +1141,13 @@ This endpoint does not need any parameter.
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `restApiOrdersTagMapGet()`
+## `getRestOrdersTagList()`
 
 ```php
-restApiOrdersTagMapGet(): \OpenAPI\Client\Model\MappingDTO[]
+getRestOrdersTagList(): \Apilo\Model\MappingDTO[]
 ```
 
-Tag list
+Tag list.
 
 List of tag
 
@@ -1563,11 +1158,11 @@ List of tag
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrderApi(
+$apiInstance = new Apilo\Api\OrderApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1575,10 +1170,10 @@ $apiInstance = new OpenAPI\Client\Api\OrderApi(
 );
 
 try {
-    $result = $apiInstance->restApiOrdersTagMapGet();
+    $result = $apiInstance->getRestOrdersTagList();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrderApi->restApiOrdersTagMapGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrderApi->getRestOrdersTagList: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1588,15 +1183,443 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MappingDTO[]**](../Model/MappingDTO.md)
+[**\Apilo\Model\MappingDTO[]**](../Model/MappingDTO.md)
 
 ### Authorization
 
-[OAuth2](../../README.md#OAuth2)
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `postRestOrderDocumentsCreate()`
+
+```php
+postRestOrderDocumentsCreate($id, $rest_order_document_dto): \Apilo\Model\RestOrderDocumentDTO2
+```
+
+Create document for order.
+
+Create document for order
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Apilo\Api\OrderApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = 'id_example'; // string | order number in Apilo system, e.g. <code>AL0012345</code>
+$rest_order_document_dto = new \Apilo\Model\RestOrderDocumentDTO(); // \Apilo\Model\RestOrderDocumentDTO
+
+try {
+    $result = $apiInstance->postRestOrderDocumentsCreate($id, $rest_order_document_dto);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OrderApi->postRestOrderDocumentsCreate: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| order number in Apilo system, e.g. &lt;code&gt;AL0012345&lt;/code&gt; | |
+| **rest_order_document_dto** | [**\Apilo\Model\RestOrderDocumentDTO**](../Model/RestOrderDocumentDTO.md)|  | |
+
+### Return type
+
+[**\Apilo\Model\RestOrderDocumentDTO2**](../Model/RestOrderDocumentDTO2.md)
+
+### Authorization
+
+[BearerAuth](../../README.md#BearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `postRestOrdersCreate()`
+
+```php
+postRestOrdersCreate($rest_order_write_dto): \Apilo\Model\PostRestOrdersCreate200Response
+```
+
+Create a new order.
+
+Create a new order
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Apilo\Api\OrderApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$rest_order_write_dto = new \Apilo\Model\RestOrderWriteDTO(); // \Apilo\Model\RestOrderWriteDTO | 
+
+try {
+    $result = $apiInstance->postRestOrdersCreate($rest_order_write_dto);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OrderApi->postRestOrdersCreate: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **rest_order_write_dto** | [**\Apilo\Model\RestOrderWriteDTO**](../Model/RestOrderWriteDTO.md)|  | [optional] |
+
+### Return type
+
+[**\Apilo\Model\PostRestOrdersCreate200Response**](../Model/PostRestOrdersCreate200Response.md)
+
+### Authorization
+
+[BearerAuth](../../README.md#BearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `postRestOrdersOrderNoteCreate()`
+
+```php
+postRestOrdersOrderNoteCreate($id, $rest_order_note_dto2): mixed
+```
+
+Add note to order.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Apilo\Api\OrderApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = 'id_example'; // string | order number in Apilo system, e.g. <code>AL0012345</code>
+$rest_order_note_dto2 = new \Apilo\Model\RestOrderNoteDTO2(); // \Apilo\Model\RestOrderNoteDTO2
+
+try {
+    $result = $apiInstance->postRestOrdersOrderNoteCreate($id, $rest_order_note_dto2);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OrderApi->postRestOrdersOrderNoteCreate: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| order number in Apilo system, e.g. &lt;code&gt;AL0012345&lt;/code&gt; | |
+| **rest_order_note_dto2** | [**\Apilo\Model\RestOrderNoteDTO2**](../Model/RestOrderNoteDTO2.md)|  | [optional] |
+
+### Return type
+
+**mixed**
+
+### Authorization
+
+[BearerAuth](../../README.md#BearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `postRestOrdersOrderTagCreate()`
+
+```php
+postRestOrdersOrderTagCreate($order_id, $order_tag_post): mixed
+```
+
+Create order tag.
+
+Create order tag
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Apilo\Api\OrderApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$order_id = 'order_id_example'; // string | Order ID
+$order_tag_post = new \Apilo\Model\OrderTagPost(); // \Apilo\Model\OrderTagPost
+
+try {
+    $result = $apiInstance->postRestOrdersOrderTagCreate($order_id, $order_tag_post);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OrderApi->postRestOrdersOrderTagCreate: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **order_id** | **string**| Order ID | |
+| **order_tag_post** | [**\Apilo\Model\OrderTagPost**](../Model/OrderTagPost.md)|  | |
+
+### Return type
+
+**mixed**
+
+### Authorization
+
+[BearerAuth](../../README.md#BearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `postRestOrdersPaymentCreate()`
+
+```php
+postRestOrdersPaymentCreate($id, $rest_order_payment_dto): mixed
+```
+
+Add payment to Order.
+
+Add payment to Orders
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Apilo\Api\OrderApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = 'id_example'; // string | order number in Apilo system, e.g. <code>AL0012345</code>
+$rest_order_payment_dto = new \Apilo\Model\RestOrderPaymentDTO(); // \Apilo\Model\RestOrderPaymentDTO
+
+try {
+    $result = $apiInstance->postRestOrdersPaymentCreate($id, $rest_order_payment_dto);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OrderApi->postRestOrdersPaymentCreate: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| order number in Apilo system, e.g. &lt;code&gt;AL0012345&lt;/code&gt; | |
+| **rest_order_payment_dto** | [**\Apilo\Model\RestOrderPaymentDTO**](../Model/RestOrderPaymentDTO.md)|  | |
+
+### Return type
+
+**mixed**
+
+### Authorization
+
+[BearerAuth](../../README.md#BearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `postRestOrdersShipmentCreate()`
+
+```php
+postRestOrdersShipmentCreate($id, $rest_order_shipment_dto2): \Apilo\Model\RestOrderShipmentDTO3
+```
+
+Add shipment to order.
+
+Shipment is created as order document, it can be see from <a href='#tag/Order/operation/get_rest_order_documents_detail'>here</a>
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Apilo\Api\OrderApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = 'id_example'; // string | order number in Apilo system, e.g. <code>AL0012345</code>
+$rest_order_shipment_dto2 = new \Apilo\Model\RestOrderShipmentDTO2(); // \Apilo\Model\RestOrderShipmentDTO2
+
+try {
+    $result = $apiInstance->postRestOrdersShipmentCreate($id, $rest_order_shipment_dto2);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OrderApi->postRestOrdersShipmentCreate: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| order number in Apilo system, e.g. &lt;code&gt;AL0012345&lt;/code&gt; | |
+| **rest_order_shipment_dto2** | [**\Apilo\Model\RestOrderShipmentDTO2**](../Model/RestOrderShipmentDTO2.md)|  | |
+
+### Return type
+
+[**\Apilo\Model\RestOrderShipmentDTO3**](../Model/RestOrderShipmentDTO3.md)
+
+### Authorization
+
+[BearerAuth](../../README.md#BearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `putRestOrdersStatusChange()`
+
+```php
+putRestOrdersStatusChange($id, $rest_status_order_dto): \Apilo\Model\PutRestOrdersStatusChange200Response
+```
+
+Update order status.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Apilo\Api\OrderApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = 'id_example'; // string | order number in Apilo system, e.g. <code>AL0012345</code>
+$rest_status_order_dto = new \Apilo\Model\RestStatusOrderDTO(); // \Apilo\Model\RestStatusOrderDTO
+
+try {
+    $result = $apiInstance->putRestOrdersStatusChange($id, $rest_status_order_dto);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OrderApi->putRestOrdersStatusChange: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| order number in Apilo system, e.g. &lt;code&gt;AL0012345&lt;/code&gt; | |
+| **rest_status_order_dto** | [**\Apilo\Model\RestStatusOrderDTO**](../Model/RestStatusOrderDTO.md)|  | |
+
+### Return type
+
+[**\Apilo\Model\PutRestOrdersStatusChange200Response**](../Model/PutRestOrdersStatusChange200Response.md)
+
+### Authorization
+
+[BearerAuth](../../README.md#BearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

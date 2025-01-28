@@ -2,6 +2,7 @@
 
 use Apilo\Api\AuthorizationApi;
 use Apilo\Configuration;
+use Apilo\Model\AuthorizationRequest;
 use Apilo\Model\RestAuthTokenPostRequest;
 use Dotenv\Dotenv;
 
@@ -24,12 +25,12 @@ $apiInstance = new AuthorizationApi(
     $config
 );
 
-$payload = new RestAuthTokenPostRequest(); // \Apilo\Model\RestAuthTokenPostRequest
+$payload = new AuthorizationRequest(); // \Apilo\Model\RestAuthTokenPostRequest
 $payload->setGrantType(RestAuthTokenPostRequest::GRANT_TYPE_REFRESH_TOKEN);
 $payload->setToken(getenv('REFRESH_TOKEN'));
 
 try {
-    $result = $apiInstance->restAuthTokenPost($payload);
+    $result = $apiInstance->postRestAuthTokenpost($payload);
 
     print_r($result);
 } catch (Exception $e) {

@@ -1,22 +1,78 @@
-# OpenAPI\Client\FinanceDocumentApi
+# Apilo\FinanceDocumentApi
 
 All URIs are relative to https://ENDPOINT.apilo.com/ (ENDPOINT is an individual client address), except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**restApiFinanceDocumentConfigsGet()**](FinanceDocumentApi.md#restApiFinanceDocumentConfigsGet) | **GET** /rest/api/finance/document-configs/ | Get accounting document numbering series |
-| [**restApiFinanceDocumentsGet()**](FinanceDocumentApi.md#restApiFinanceDocumentsGet) | **GET** /rest/api/finance/documents/ | Get list of accounting documents |
-| [**restApiFinanceDocumentsIdDocumentsIdExternalDelete()**](FinanceDocumentApi.md#restApiFinanceDocumentsIdDocumentsIdExternalDelete) | **DELETE** /rest/api/finance/documents/{id}/documents/{idExternal}/ | Delete a document for accounting documents |
-| [**restApiFinanceDocumentsIdDocumentsPost()**](FinanceDocumentApi.md#restApiFinanceDocumentsIdDocumentsPost) | **POST** /rest/api/finance/documents/{id}/documents/ | Create a document for accounting documents |
+| [**deleteRestFinanceDocumentsDocumentsDelete()**](FinanceDocumentApi.md#deleteRestFinanceDocumentsDocumentsDelete) | **DELETE** /rest/api/finance/documents/{id}/documents/{idExternal}/ | Delete a document for accounting documents. |
+| [**getRestFinanceDocumentConfigsIndex()**](FinanceDocumentApi.md#getRestFinanceDocumentConfigsIndex) | **GET** /rest/api/finance/document-configs/ | Get accounting document numbering series. |
+| [**getRestFinanceDocumentIndex()**](FinanceDocumentApi.md#getRestFinanceDocumentIndex) | **GET** /rest/api/finance/documents/ | Get list of accounting documents. |
+| [**postRestFinanceDocumentsDocumentsCreate()**](FinanceDocumentApi.md#postRestFinanceDocumentsDocumentsCreate) | **POST** /rest/api/finance/documents/{id}/documents/ | Create a document for accounting documents. |
 
 
-## `restApiFinanceDocumentConfigsGet()`
+## `deleteRestFinanceDocumentsDocumentsDelete()`
 
 ```php
-restApiFinanceDocumentConfigsGet($type): \OpenAPI\Client\Model\RestApiFinanceDocumentConfigsGet200Response
+deleteRestFinanceDocumentsDocumentsDelete($id, $id_external): \Apilo\Model\RestBundleException
 ```
 
-Get accounting document numbering series
+Delete a document for accounting documents.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new Apilo\Api\FinanceDocumentApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$id = 56; // int
+$id_external = 56; // int
+
+try {
+    $result = $apiInstance->deleteRestFinanceDocumentsDocumentsDelete($id, $id_external);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling FinanceDocumentApi->deleteRestFinanceDocumentsDocumentsDelete: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **int**|  | |
+| **id_external** | **int**|  | |
+
+### Return type
+
+[**\Apilo\Model\RestBundleException**](../Model/RestBundleException.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getRestFinanceDocumentConfigsIndex()`
+
+```php
+getRestFinanceDocumentConfigsIndex($type, $offset, $limit): \Apilo\Model\GetRestFinanceDocumentConfigsIndex200Response
+```
+
+Get accounting document numbering series.
 
 List of numbering series
 
@@ -27,23 +83,25 @@ List of numbering series
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\FinanceDocumentApi(
+$apiInstance = new Apilo\Api\FinanceDocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $type = 56; // int | Type of accounting document (1-Invoice, 5-Receipt, 10-Proforma, 31-Corrective invoice)
+$offset = 56; // int
+$limit = 56; // int
 
 try {
-    $result = $apiInstance->restApiFinanceDocumentConfigsGet($type);
+    $result = $apiInstance->getRestFinanceDocumentConfigsIndex($type, $offset, $limit);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling FinanceDocumentApi->restApiFinanceDocumentConfigsGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling FinanceDocumentApi->getRestFinanceDocumentConfigsIndex: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -52,14 +110,16 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **type** | **int**| Type of accounting document (1-Invoice, 5-Receipt, 10-Proforma, 31-Corrective invoice) | [optional] |
+| **offset** | **int**|  | [optional] |
+| **limit** | **int**|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\RestApiFinanceDocumentConfigsGet200Response**](../Model/RestApiFinanceDocumentConfigsGet200Response.md)
+[**\Apilo\Model\GetRestFinanceDocumentConfigsIndex200Response**](../Model/GetRestFinanceDocumentConfigsIndex200Response.md)
 
 ### Authorization
 
-[OAuth2](../../README.md#OAuth2)
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -70,13 +130,13 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `restApiFinanceDocumentsGet()`
+## `getRestFinanceDocumentIndex()`
 
 ```php
-restApiFinanceDocumentsGet($type, $has_document_document_type, $has_not_document_document_type, $is_fiscal, $document_config): \OpenAPI\Client\Model\RestApiFinanceDocumentsGet200Response
+getRestFinanceDocumentIndex($type, $has_document_document_type, $has_not_document_document_type, $is_fiscal, $document_config, $offset, $limit): \Apilo\Model\GetRestFinanceDocumentIndex200Response
 ```
 
-Get list of accounting documents
+Get list of accounting documents.
 
 List of accounting documents
 
@@ -87,27 +147,29 @@ List of accounting documents
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\FinanceDocumentApi(
+$apiInstance = new Apilo\Api\FinanceDocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$type = 'type_example'; // string | Type of accounting document (1-Invoice, 5-Receipt, 10-Proforma, 31-Corrective invoice)
+$type = 56; // int | Type of accounting document (1-Invoice, 5-Receipt, 10-Proforma, 31-Corrective invoice)
 $has_document_document_type = 56; // int | A DocumentDocument of the specified type is created (1-printed, 2-exported to an external platform)
 $has_not_document_document_type = 56; // int | A DocumentDocument of the specified type is not created (1-printed, 2-exported to an external platform)
 $is_fiscal = True; // bool | Only for type Receipt type (type=5)
-$document_config = array(56); // int[] | ID of <a href='#tag/finance_document/paths/~1rest~1api~1finance~1document-configs~1/get'>accounting document numbering series</a>
+$document_config = array(56); // int[] | ID of <a href='#tag/Finance-document/operation/get_rest_finance_document_configs_index'>accounting document numbering series</a>
+$offset = 56; // int
+$limit = 56; // int
 
 try {
-    $result = $apiInstance->restApiFinanceDocumentsGet($type, $has_document_document_type, $has_not_document_document_type, $is_fiscal, $document_config);
+    $result = $apiInstance->getRestFinanceDocumentIndex($type, $has_document_document_type, $has_not_document_document_type, $is_fiscal, $document_config, $offset, $limit);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling FinanceDocumentApi->restApiFinanceDocumentsGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling FinanceDocumentApi->getRestFinanceDocumentIndex: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -115,19 +177,21 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **type** | **string**| Type of accounting document (1-Invoice, 5-Receipt, 10-Proforma, 31-Corrective invoice) | [optional] |
+| **type** | **int**| Type of accounting document (1-Invoice, 5-Receipt, 10-Proforma, 31-Corrective invoice) | [optional] |
 | **has_document_document_type** | **int**| A DocumentDocument of the specified type is created (1-printed, 2-exported to an external platform) | [optional] |
 | **has_not_document_document_type** | **int**| A DocumentDocument of the specified type is not created (1-printed, 2-exported to an external platform) | [optional] |
 | **is_fiscal** | **bool**| Only for type Receipt type (type&#x3D;5) | [optional] |
-| **document_config** | [**int[]**](../Model/int.md)| ID of &lt;a href&#x3D;&#39;#tag/finance_document/paths/~1rest~1api~1finance~1document-configs~1/get&#39;&gt;accounting document numbering series&lt;/a&gt; | [optional] |
+| **document_config** | [**int[]**](../Model/int.md)| ID of &lt;a href&#x3D;&#39;#tag/Finance-document/operation/get_rest_finance_document_configs_index&#39;&gt;accounting document numbering series&lt;/a&gt; | [optional] |
+| **offset** | **int**|  | [optional] |
+| **limit** | **int**|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\RestApiFinanceDocumentsGet200Response**](../Model/RestApiFinanceDocumentsGet200Response.md)
+[**\Apilo\Model\GetRestFinanceDocumentIndex200Response**](../Model/GetRestFinanceDocumentIndex200Response.md)
 
 ### Authorization
 
-[OAuth2](../../README.md#OAuth2)
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -138,70 +202,13 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `restApiFinanceDocumentsIdDocumentsIdExternalDelete()`
+## `postRestFinanceDocumentsDocumentsCreate()`
 
 ```php
-restApiFinanceDocumentsIdDocumentsIdExternalDelete($id, $id_external)
+postRestFinanceDocumentsDocumentsCreate($id, $rest_document_document_dto): mixed
 ```
 
-Delete a document for accounting documents
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new OpenAPI\Client\Api\FinanceDocumentApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$id = 56; // int | Internal ID of the document (e.g. 31)
-$id_external = 56; // int | Unique document ID (e.g. 24)
-
-try {
-    $apiInstance->restApiFinanceDocumentsIdDocumentsIdExternalDelete($id, $id_external);
-} catch (Exception $e) {
-    echo 'Exception when calling FinanceDocumentApi->restApiFinanceDocumentsIdDocumentsIdExternalDelete: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **id** | **int**| Internal ID of the document (e.g. 31) | |
-| **id_external** | **int**| Unique document ID (e.g. 24) | |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[OAuth2](../../README.md#OAuth2)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `restApiFinanceDocumentsIdDocumentsPost()`
-
-```php
-restApiFinanceDocumentsIdDocumentsPost($id, $body): object
-```
+Create a document for accounting documents.
 
 Create a document for accounting documents
 
@@ -212,24 +219,24 @@ Create a document for accounting documents
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: OAuth2
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\FinanceDocumentApi(
+$apiInstance = new Apilo\Api\FinanceDocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 'id_example'; // string
-$body = new \OpenAPI\Client\Model\RestDocumentDocumentDTO2(); // \OpenAPI\Client\Model\RestDocumentDocumentDTO2
+$rest_document_document_dto = new \Apilo\Model\RestDocumentDocumentDTO(); // \Apilo\Model\RestDocumentDocumentDTO
 
 try {
-    $result = $apiInstance->restApiFinanceDocumentsIdDocumentsPost($id, $body);
+    $result = $apiInstance->postRestFinanceDocumentsDocumentsCreate($id, $rest_document_document_dto);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling FinanceDocumentApi->restApiFinanceDocumentsIdDocumentsPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling FinanceDocumentApi->postRestFinanceDocumentsDocumentsCreate: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -238,19 +245,19 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**|  | |
-| **body** | [**\OpenAPI\Client\Model\RestDocumentDocumentDTO2**](../Model/RestDocumentDocumentDTO2.md)|  | |
+| **rest_document_document_dto** | [**\Apilo\Model\RestDocumentDocumentDTO**](../Model/RestDocumentDocumentDTO.md)|  | |
 
 ### Return type
 
-**object**
+**mixed**
 
 ### Authorization
 
-[OAuth2](../../README.md#OAuth2)
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

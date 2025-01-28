@@ -27,7 +27,7 @@ try {
     $statusMap = [];
     $statusNew = null;
 
-    foreach ($apiInstance->restApiOrdersStatusMapGet() as $status) {
+    foreach ($apiInstance->getRestOrdersStatusMap() as $status) {
         echo sprintf(
             "status name: %s, id: %d\n",
             $status->getName(),
@@ -44,7 +44,7 @@ try {
         $createdAfter = new DateTime('- 31 days');
         $orderedAfter = new DateTime('- 45 days');
 
-        $orders = $apiInstance->restApiOrdersGet(
+        $orders = $apiInstance->getRestOrdersIndex(
             $createdAfter->format(DateTimeInterface::ATOM),
             null,
             $orderedAfter->format(DateTimeInterface::ATOM),
@@ -72,6 +72,7 @@ try {
         }
     }
 } catch (Exception $e) {
+    echo $e->getTraceAsString();
     echo 'Exception when calling AuthorizationApi->restAuthTokenPost: ', $e->getMessage(), PHP_EOL;
 }
 
