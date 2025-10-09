@@ -19,5 +19,6 @@ Name | Type | Description | Notes
 **document_issuer** | [**\Apilo\Model\RestDocumentPersonalInfoDTO**](RestDocumentPersonalInfoDTO.md) |  | [optional]
 **document_items** | [**\Apilo\Model\RestDocumentItemDTO[]**](RestDocumentItemDTO.md) | Docment items | [optional]
 **payment_type** | **int** | &lt;a href&#x3D;&#39;#tag/Order/operation/get_rest_orders_payment_map&#39;&gt;Payment method ID&lt;/a&gt; |
+**order_id** | **string** | Order Id | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

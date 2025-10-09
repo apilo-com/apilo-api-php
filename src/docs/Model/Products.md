@@ -4,18 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**sku** | **string** |  |
+**original_code** | **string** |  | [optional]
 **name** | **string** |  | [optional]
+**sku** | **string** |  |
+**quantity** | **int** |  |
+**price_with_tax** | **string** |  |
 **tax** | **string** |  |
 **status** | **int** |  |
-**original_code** | **string** |  | [optional]
 **group_name** | **string** |  | [optional]
 **attributes** | **string[]** | Array of attribute ID | [optional]
 **images** | **string[]** | Array of UUID uploaded media via Attachment endpoint or associative array of image URL - key attribute is reference | [optional]
 **categories** | **int[]** | Array of category ID | [optional]
 **ean** | **string** |  | [optional]
-**quantity** | **int** |  |
-**price_with_tax** | **string** |  |
 **weight** | **float** |  | [optional]
 **unit** | **string** |  | [optional]
 **description** | **string** | Long product description | [optional]

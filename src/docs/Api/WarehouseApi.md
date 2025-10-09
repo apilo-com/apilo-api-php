@@ -1,6 +1,6 @@
 # Apilo\WarehouseApi
 
-All URIs are relative to https://ENDPOINT.apilo.com/ (ENDPOINT is an individual client address), except if the operation defines another base path.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
@@ -272,7 +272,7 @@ try {
 ## `getRestWarehouseCategoryIndex()`
 
 ```php
-getRestWarehouseCategoryIndex($id, $offset, $limit): \Apilo\Model\GetCategoriesResponse
+getRestWarehouseCategoryIndex($id, $offset, $limit): \Apilo\Model\GetRestWarehouseCategoryIndex200Response
 ```
 
 Categories list.
@@ -316,7 +316,7 @@ try {
 
 ### Return type
 
-[**\Apilo\Model\GetCategoriesResponse**](../Model/GetCategoriesResponse.md)
+[**\Apilo\Model\GetRestWarehouseCategoryIndex200Response**](../Model/GetRestWarehouseCategoryIndex200Response.md)
 
 ### Authorization
 
@@ -603,7 +603,7 @@ $name = 'name_example'; // string
 $ean = 'ean_example'; // string
 $status = 3.4; // float | Product status (`0-inactive`, `1-active`, `8-archive`)
 $offset = 56; // int
-$limit = 56; // int | Position indicator (0-beginning, 1-skips one record, 256 - skips 256 records), max 2000 records
+$limit = 56; // int | Limit of returned results
 
 try {
     $result = $apiInstance->getRestWarehouseProductIndex($id, $sku, $name, $ean, $status, $offset, $limit);
@@ -623,7 +623,7 @@ try {
 | **ean** | **string**|  | [optional] |
 | **status** | **float**| Product status (&#x60;0-inactive&#x60;, &#x60;1-active&#x60;, &#x60;8-archive&#x60;) | [optional] |
 | **offset** | **int**|  | [optional] |
-| **limit** | **int**| Position indicator (0-beginning, 1-skips one record, 256 - skips 256 records), max 2000 records | [optional] |
+| **limit** | **int**| Limit of returned results | [optional] |
 
 ### Return type
 
@@ -1068,6 +1068,8 @@ postRestWarehouseProductCreate($products): \Apilo\Model\ProductsNotCreateRespons
 
 Products create.
 
+Uwaga: Pole groupName jest deprecated i zostanie usunięte w przyszłości, Zamiast niego należy używać pola name, ponieważ obecnie obsługuje ono oba wymagania dotyczące nazewnictwa produktów.
+
 ### Example
 
 ```php
@@ -1125,6 +1127,8 @@ putRestWarehouseProductUpdate($product_put): mixed
 ```
 
 Products data update.
+
+Uwaga: Pole groupName jest deprecated i zostanie usunięte w przyszłości, Zamiast niego należy używać pola name, ponieważ obecnie obsługuje ono oba wymagania dotyczące nazewnictwa produktów.
 
 ### Example
 

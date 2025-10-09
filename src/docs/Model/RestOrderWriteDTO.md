@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **platform_id** | **int** | &lt;a href&#x3D;&#39;#tag/Order/operation/get_rest_orders_platform_map&#39;&gt;Sale platform account ID&lt;/a&gt; |
 **id_external** | **string** | External order ID, e.g. on the sales platform | [optional]
 **is_invoice** | **bool** | Does the customer want a VAT invoice? | [optional]
-**customer_login** | **bool** |  | [optional]
+**customer_login** | **string** |  | [optional]
 **payment_status** | **string** | Payment status (&#x60;0-no payment&#x60;, &#x60;1-partially paid&#x60;, &#x60;2-paid in full/amount in accordance with the order&#x60;, &#x60;3-overpayment&#x60;) |
 **payment_type** | **int** | &lt;a href&#x3D;&#39;#tag/Order/operation/get_rest_orders_payment_map&#39;&gt;Payment method ID&lt;/a&gt; |
 **original_currency** | **string** | Order currency |

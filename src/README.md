@@ -43,14 +43,27 @@ zakodowaniu znaku plusa, w przeciwnym wypadku zostanie zinterpretowany jako spac
 
 `2024-09-12T08:16:32+02:00`
 
+## Obsługa języków - Opcjonalnie
+    `Nagłówek nie jest wymagany do prawidłowego działania zapytania wysłanego do serwera.`
+
+Dla obsługi domyślnym językiem odpowiedzi jest język polski, w celu zmienienia języka należy dodać następujący nagłówek
+```
+Accept-Language: pl
+```
+
+Wartości które nagłówek może przyjąć to ```pl``` ```de``` ```en``` ```en-US``` ```en-GB```.
+
+Więcej informacji:
+  - <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Accept-Language\">Accept-Language - HTTP | MDN</a>
+  - <a href=\"https://datatracker.ietf.org/doc/html/rfc3282\">RFC 3282</a>
+
 
 
 ## Installation & Usage
 
 ### Requirements
 
-PHP 7.4 and later.
-Should also work with PHP 8.0.
+PHP 8.1 and later.
 
 ### Composer
 
@@ -116,7 +129,7 @@ try {
 
 ## API Endpoints
 
-All URIs are relative to  *https://ENDPOINT.apilo.com/* (ENDPOINT is an individual client address)
+All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -146,6 +159,7 @@ Class | Method | HTTP request | Description
 *OrderApi* | [**getRestOrdersShipmentDetail**](docs/Api/OrderApi.md#getrestordersshipmentdetail) | **GET** /rest/api/orders/{id}/shipment/{shipment}/ | Shipment detail.
 *OrderApi* | [**getRestOrdersShipmentList**](docs/Api/OrderApi.md#getrestordersshipmentlist) | **GET** /rest/api/orders/{id}/shipment/ | List of order shipments.
 *OrderApi* | [**getRestOrdersShipmentStatusMap**](docs/Api/OrderApi.md#getrestordersshipmentstatusmap) | **GET** /rest/api/orders/shipment/status/map/ | Get shipment status map.
+*OrderApi* | [**getRestOrdersShippingSettingsDefaults**](docs/Api/OrderApi.md#getrestordersshippingsettingsdefaults) | **GET** /rest/api/orders/{id}/shipping-settings-defaults/ | Get order default shipping settings.
 *OrderApi* | [**getRestOrdersStatusMap**](docs/Api/OrderApi.md#getrestordersstatusmap) | **GET** /rest/api/orders/status/map/ | Get order Status types list.
 *OrderApi* | [**getRestOrdersTagList**](docs/Api/OrderApi.md#getrestorderstaglist) | **GET** /rest/api/orders/tag/map/ | Tag list.
 *OrderApi* | [**postRestOrderDocumentsCreate**](docs/Api/OrderApi.md#postrestorderdocumentscreate) | **POST** /rest/api/orders/{id}/documents/ | Create document for order.
@@ -189,7 +203,6 @@ Class | Method | HTTP request | Description
 
 ## Models
 
-- [AddressReceiverDTO](docs/Model/AddressReceiverDTO.md)
 - [AttributeFeaturesInner](docs/Model/AttributeFeaturesInner.md)
 - [AttributeFeaturesInner1](docs/Model/AttributeFeaturesInner1.md)
 - [AttributeFeaturesInner2](docs/Model/AttributeFeaturesInner2.md)
@@ -199,28 +212,32 @@ Class | Method | HTTP request | Description
 - [CarrierAccountMappingListingDTO](docs/Model/CarrierAccountMappingListingDTO.md)
 - [CarrierAccountOptionsDTO](docs/Model/CarrierAccountOptionsDTO.md)
 - [CategoryCreateModel](docs/Model/CategoryCreateModel.md)
-- [CategoryModel](docs/Model/CategoryModel.md)
+- [CompanyAddressDTO](docs/Model/CompanyAddressDTO.md)
 - [ContentDTO](docs/Model/ContentDTO.md)
 - [CreateCategoriesResponse](docs/Model/CreateCategoriesResponse.md)
 - [DocumentDocumentCreatePreferencesDTO](docs/Model/DocumentDocumentCreatePreferencesDTO.md)
 - [DocumentDocumentCreatePreferencesDTO2](docs/Model/DocumentDocumentCreatePreferencesDTO2.md)
-- [GetCategoriesResponse](docs/Model/GetCategoriesResponse.md)
 - [GetProductsResponse](docs/Model/GetProductsResponse.md)
 - [GetRestFinanceDocumentConfigsIndex200Response](docs/Model/GetRestFinanceDocumentConfigsIndex200Response.md)
 - [GetRestFinanceDocumentIndex200Response](docs/Model/GetRestFinanceDocumentIndex200Response.md)
 - [GetRestOrderDocumentsIndex200Response](docs/Model/GetRestOrderDocumentsIndex200Response.md)
 - [GetRestOrdersIndex200Response](docs/Model/GetRestOrdersIndex200Response.md)
 - [GetRestOrdersShipmentList200Response](docs/Model/GetRestOrdersShipmentList200Response.md)
+- [GetRestWarehouseCategoryIndex200Response](docs/Model/GetRestWarehouseCategoryIndex200Response.md)
 - [GetRestWarehousePriceIndex200Response](docs/Model/GetRestWarehousePriceIndex200Response.md)
 - [GetRestWarehouseProductmediaGetproductmedia200Response](docs/Model/GetRestWarehouseProductmediaGetproductmedia200Response.md)
 - [HelloResponse](docs/Model/HelloResponse.md)
+- [HouseAddressDTO](docs/Model/HouseAddressDTO.md)
 - [IdModel](docs/Model/IdModel.md)
 - [MappingDTO](docs/Model/MappingDTO.md)
 - [Media](docs/Model/Media.md)
 - [NewShipmentCreatedDTO](docs/Model/NewShipmentCreatedDTO.md)
 - [NewShipmentDTO](docs/Model/NewShipmentDTO.md)
+- [NewShipmentDTOAddressReceiver](docs/Model/NewShipmentDTOAddressReceiver.md)
+- [NewShipmentDTOOptionsInner](docs/Model/NewShipmentDTOOptionsInner.md)
 - [NewShipmentsCreatedResponse](docs/Model/NewShipmentsCreatedResponse.md)
 - [OrderTagPost](docs/Model/OrderTagPost.md)
+- [ParcelAddressDTO](docs/Model/ParcelAddressDTO.md)
 - [PostRestOrdersCreate200Response](docs/Model/PostRestOrdersCreate200Response.md)
 - [PostRestOrdersPaymentCreate201Response](docs/Model/PostRestOrdersPaymentCreate201Response.md)
 - [PostRestWarehousePriceCalculatedCreateUpdate422Response](docs/Model/PostRestWarehousePriceCalculatedCreateUpdate422Response.md)
@@ -253,6 +270,7 @@ Class | Method | HTTP request | Description
 - [RestBundleException3](docs/Model/RestBundleException3.md)
 - [RestCarrierMethodDTO](docs/Model/RestCarrierMethodDTO.md)
 - [RestCarrierMethodListingDTO](docs/Model/RestCarrierMethodListingDTO.md)
+- [RestCategoryDTO](docs/Model/RestCategoryDTO.md)
 - [RestDocumentConfigDTO](docs/Model/RestDocumentConfigDTO.md)
 - [RestDocumentConfigsIndexResponse](docs/Model/RestDocumentConfigsIndexResponse.md)
 - [RestDocumentDTO](docs/Model/RestDocumentDTO.md)
@@ -261,6 +279,7 @@ Class | Method | HTTP request | Description
 - [RestDocumentItemDTO](docs/Model/RestDocumentItemDTO.md)
 - [RestDocumentPersonalInfoDTO](docs/Model/RestDocumentPersonalInfoDTO.md)
 - [RestDocumentsIndexResponse](docs/Model/RestDocumentsIndexResponse.md)
+- [RestHelpDTO](docs/Model/RestHelpDTO.md)
 - [RestListingResponse](docs/Model/RestListingResponse.md)
 - [RestOrderAddressDTO](docs/Model/RestOrderAddressDTO.md)
 - [RestOrderAddressDTO2](docs/Model/RestOrderAddressDTO2.md)
@@ -269,6 +288,8 @@ Class | Method | HTTP request | Description
 - [RestOrderAddressDTO5](docs/Model/RestOrderAddressDTO5.md)
 - [RestOrderAddressDTO6](docs/Model/RestOrderAddressDTO6.md)
 - [RestOrderAddressDTO7](docs/Model/RestOrderAddressDTO7.md)
+- [RestOrderDefaultShippingSettingsDTO](docs/Model/RestOrderDefaultShippingSettingsDTO.md)
+- [RestOrderDetailDTO](docs/Model/RestOrderDetailDTO.md)
 - [RestOrderDocumentDTO](docs/Model/RestOrderDocumentDTO.md)
 - [RestOrderDocumentDTO2](docs/Model/RestOrderDocumentDTO2.md)
 - [RestOrderDocumentDTO3](docs/Model/RestOrderDocumentDTO3.md)
@@ -276,13 +297,13 @@ Class | Method | HTTP request | Description
 - [RestOrderItemsDTO](docs/Model/RestOrderItemsDTO.md)
 - [RestOrderItemsDTO2](docs/Model/RestOrderItemsDTO2.md)
 - [RestOrderItemsDTO3](docs/Model/RestOrderItemsDTO3.md)
+- [RestOrderListDTO](docs/Model/RestOrderListDTO.md)
+- [RestOrderMappedDeliveryDTO](docs/Model/RestOrderMappedDeliveryDTO.md)
 - [RestOrderNoteDTO](docs/Model/RestOrderNoteDTO.md)
 - [RestOrderNoteDTO2](docs/Model/RestOrderNoteDTO2.md)
 - [RestOrderNoteDTO3](docs/Model/RestOrderNoteDTO3.md)
 - [RestOrderPaymentDTO](docs/Model/RestOrderPaymentDTO.md)
 - [RestOrderPaymentDTO2](docs/Model/RestOrderPaymentDTO2.md)
-- [RestOrderReadDTO](docs/Model/RestOrderReadDTO.md)
-- [RestOrderReadDTO2](docs/Model/RestOrderReadDTO2.md)
 - [RestOrderShipmentDTO](docs/Model/RestOrderShipmentDTO.md)
 - [RestOrderShipmentDTO2](docs/Model/RestOrderShipmentDTO2.md)
 - [RestOrderShipmentDTO3](docs/Model/RestOrderShipmentDTO3.md)
@@ -317,12 +338,18 @@ Class | Method | HTTP request | Description
 - [RestShipmentIdDTO](docs/Model/RestShipmentIdDTO.md)
 - [RestShipmentInfoDTO](docs/Model/RestShipmentInfoDTO.md)
 - [RestShipmentInfoIndexResponse](docs/Model/RestShipmentInfoIndexResponse.md)
+- [RestShipmentOptionBooleanDTO](docs/Model/RestShipmentOptionBooleanDTO.md)
+- [RestShipmentOptionChoiceDTO](docs/Model/RestShipmentOptionChoiceDTO.md)
+- [RestShipmentOptionChoiceValueDTO](docs/Model/RestShipmentOptionChoiceValueDTO.md)
 - [RestShipmentOptionDTO](docs/Model/RestShipmentOptionDTO.md)
-- [RestShipmentOptionDTO2](docs/Model/RestShipmentOptionDTO2.md)
-- [RestShipmentOptionDTOValue](docs/Model/RestShipmentOptionDTOValue.md)
-- [RestShipmentOptionDTOValueAnyOfInner](docs/Model/RestShipmentOptionDTOValueAnyOfInner.md)
+- [RestShipmentOptionDimensionsDTO](docs/Model/RestShipmentOptionDimensionsDTO.md)
+- [RestShipmentOptionIntegerDTO](docs/Model/RestShipmentOptionIntegerDTO.md)
+- [RestShipmentOptionMoneyDTO](docs/Model/RestShipmentOptionMoneyDTO.md)
+- [RestShipmentOptionMoneyValueDTO](docs/Model/RestShipmentOptionMoneyValueDTO.md)
+- [RestShipmentOptionStringDTO](docs/Model/RestShipmentOptionStringDTO.md)
 - [RestShipmentOptionsAndParcelsDTO](docs/Model/RestShipmentOptionsAndParcelsDTO.md)
 - [RestShipmentOptionsDefinitionDTO](docs/Model/RestShipmentOptionsDefinitionDTO.md)
+- [RestShipmentOptionsDimensionsValueDTO](docs/Model/RestShipmentOptionsDimensionsValueDTO.md)
 - [RestShipmentParcelDTO](docs/Model/RestShipmentParcelDTO.md)
 - [RestShipmentPickupDateProposalsDTO](docs/Model/RestShipmentPickupDateProposalsDTO.md)
 - [RestShipmentPickupDateProposalsListingDTO](docs/Model/RestShipmentPickupDateProposalsListingDTO.md)
@@ -367,6 +394,6 @@ vendor/bin/phpunit
 
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: `2.0.0.0`
-    - Generator version: `7.10.0`
+- API version: `2.0.0.4`
+    - Generator version: `7.16.0`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

@@ -1,6 +1,6 @@
 # Apilo\OrderApi
 
-All URIs are relative to https://ENDPOINT.apilo.com/ (ENDPOINT is an individual client address), except if the operation defines another base path.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
@@ -21,6 +21,7 @@ All URIs are relative to https://ENDPOINT.apilo.com/ (ENDPOINT is an individual 
 | [**getRestOrdersShipmentDetail()**](OrderApi.md#getRestOrdersShipmentDetail) | **GET** /rest/api/orders/{id}/shipment/{shipment}/ | Shipment detail. |
 | [**getRestOrdersShipmentList()**](OrderApi.md#getRestOrdersShipmentList) | **GET** /rest/api/orders/{id}/shipment/ | List of order shipments. |
 | [**getRestOrdersShipmentStatusMap()**](OrderApi.md#getRestOrdersShipmentStatusMap) | **GET** /rest/api/orders/shipment/status/map/ | Get shipment status map. |
+| [**getRestOrdersShippingSettingsDefaults()**](OrderApi.md#getRestOrdersShippingSettingsDefaults) | **GET** /rest/api/orders/{id}/shipping-settings-defaults/ | Get order default shipping settings. |
 | [**getRestOrdersStatusMap()**](OrderApi.md#getRestOrdersStatusMap) | **GET** /rest/api/orders/status/map/ | Get order Status types list. |
 | [**getRestOrdersTagList()**](OrderApi.md#getRestOrdersTagList) | **GET** /rest/api/orders/tag/map/ | Tag list. |
 | [**postRestOrderDocumentsCreate()**](OrderApi.md#postRestOrderDocumentsCreate) | **POST** /rest/api/orders/{id}/documents/ | Create document for order. |
@@ -463,7 +464,7 @@ This endpoint does not need any parameter.
 ## `getRestOrdersDetail()`
 
 ```php
-getRestOrdersDetail($id): \Apilo\Model\RestOrderReadDTO
+getRestOrdersDetail($id): \Apilo\Model\RestOrderDetailDTO
 ```
 
 Get detailed order by given ID.
@@ -503,7 +504,7 @@ try {
 
 ### Return type
 
-[**\Apilo\Model\RestOrderReadDTO**](../Model/RestOrderReadDTO.md)
+[**\Apilo\Model\RestOrderDetailDTO**](../Model/RestOrderDetailDTO.md)
 
 ### Authorization
 
@@ -521,7 +522,7 @@ try {
 ## `getRestOrdersIndex()`
 
 ```php
-getRestOrdersIndex($created_after, $created_before, $ordered_after, $ordered_before, $updated_after, $updated_before, $is_order_document, $id, $id_external, $order_status, $order_status_ids, $sort, $offset, $limit): \Apilo\Model\GetRestOrdersIndex200Response
+getRestOrdersIndex($created_after, $created_before, $ordered_after, $ordered_before, $updated_after, $updated_before, $is_order_document, $id, $id_external, $order_status, $order_status_ids, $payment_status, $payment_type, $platform_account_id, $carrier_id, $email, $sort, $offset, $limit): \Apilo\Model\GetRestOrdersIndex200Response
 ```
 
 Get simple list of orders.
@@ -556,12 +557,17 @@ $id = 'id_example'; // string
 $id_external = 'id_external_example'; // string
 $order_status = 56; // int
 $order_status_ids = array(56); // int[]
+$payment_status = 56; // int
+$payment_type = 56; // int
+$platform_account_id = 56; // int
+$carrier_id = 56; // int
+$email = 'email_example'; // string
 $sort = 56; // int | Sort options
 $offset = 56; // int
 $limit = 56; // int
 
 try {
-    $result = $apiInstance->getRestOrdersIndex($created_after, $created_before, $ordered_after, $ordered_before, $updated_after, $updated_before, $is_order_document, $id, $id_external, $order_status, $order_status_ids, $sort, $offset, $limit);
+    $result = $apiInstance->getRestOrdersIndex($created_after, $created_before, $ordered_after, $ordered_before, $updated_after, $updated_before, $is_order_document, $id, $id_external, $order_status, $order_status_ids, $payment_status, $payment_type, $platform_account_id, $carrier_id, $email, $sort, $offset, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrderApi->getRestOrdersIndex: ', $e->getMessage(), PHP_EOL;
@@ -583,6 +589,11 @@ try {
 | **id_external** | **string**|  | [optional] |
 | **order_status** | **int**|  | [optional] |
 | **order_status_ids** | [**int[]**](../Model/int.md)|  | [optional] |
+| **payment_status** | **int**|  | [optional] |
+| **payment_type** | **int**|  | [optional] |
+| **platform_account_id** | **int**|  | [optional] |
+| **carrier_id** | **int**|  | [optional] |
+| **email** | **string**|  | [optional] |
 | **sort** | **int**| Sort options | [optional] |
 | **offset** | **int**|  | [optional] |
 | **limit** | **int**|  | [optional] |
@@ -1070,6 +1081,64 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**\Apilo\Model\MappingDTO[]**](../Model/MappingDTO.md)
+
+### Authorization
+
+[BearerAuth](../../README.md#BearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getRestOrdersShippingSettingsDefaults()`
+
+```php
+getRestOrdersShippingSettingsDefaults($id): \Apilo\Model\RestOrderDefaultShippingSettingsDTO
+```
+
+Get order default shipping settings.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: BearerAuth
+$config = Apilo\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Apilo\Api\OrderApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = 'id_example'; // string | order number in Apilo system, e.g. <code>AL0012345</code>
+
+try {
+    $result = $apiInstance->getRestOrdersShippingSettingsDefaults($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OrderApi->getRestOrdersShippingSettingsDefaults: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| order number in Apilo system, e.g. &lt;code&gt;AL0012345&lt;/code&gt; | |
+
+### Return type
+
+[**\Apilo\Model\RestOrderDefaultShippingSettingsDTO**](../Model/RestOrderDefaultShippingSettingsDTO.md)
 
 ### Authorization
 

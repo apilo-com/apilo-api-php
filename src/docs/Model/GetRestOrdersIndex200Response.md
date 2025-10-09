@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**orders** | [**\Apilo\Model\RestOrderReadDTO2[]**](RestOrderReadDTO2.md) | List of orders | [optional]
+**orders** | [**\Apilo\Model\RestOrderListDTO[]**](RestOrderListDTO.md) | List of orders | [optional]
 **total_count** | **int** | Number of matching results | [optional]
 **current_offset** | **int** | Current list offset | [optional]
 **page_result_count** | **int** | Number of results per page | [optional]
